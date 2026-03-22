@@ -9,7 +9,7 @@ import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 
 function TestimonialCard({ name, initials, rating, text, service, location }: typeof testimonials[0] & { location?: string }) {
   return (
-    <div className="flex-shrink-0 w-[340px] p-6 rounded-xl bg-white/[0.04] border border-white/[0.07] backdrop-blur-xl mx-3">
+    <div className="flex-shrink-0 w-[320px] sm:w-[340px] p-6 rounded-xl bg-white/[0.04] border border-white/[0.07] backdrop-blur-xl mx-3">
       {/* Stars */}
       <div className="flex gap-0.5 mb-4">
         {[...Array(rating)].map((_, i) => (
@@ -61,7 +61,7 @@ export default function Testimonials() {
         />
 
         <div
-          className={`flex ${prefersReducedMotion ? "flex-wrap gap-4 px-4" : ""}`}
+          className={`flex ${prefersReducedMotion ? "flex-wrap gap-6 px-6 justify-center" : ""}`}
           style={
             prefersReducedMotion
               ? {}
