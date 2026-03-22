@@ -127,7 +127,7 @@ export default function Header() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.97 }}
                             transition={{ duration: 0.15, ease: "easeOut" }}
-                            className="absolute top-full left-0 mt-2 w-56 bg-[#172035]/98 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden"
+                            className="absolute top-full left-0 mt-2 w-56 bg-[#0D1526] backdrop-blur-2xl border border-white/[0.12] rounded-2xl shadow-[0_24px_64px_rgba(0,0,0,0.7)] overflow-hidden"
                           >
                             {/* Top glow accent */}
                             <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#2DD4BF]/40 to-transparent" />
@@ -141,7 +141,7 @@ export default function Header() {
                                     className={`group flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-150 ${
                                       itemActive
                                         ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
-                                        : "text-[#9BA8BB] hover:text-[#F0EDE8] hover:bg-white/[0.05]"
+                                        : "text-[#D4DDE8] hover:text-[#F0EDE8] hover:bg-white/[0.07]"
                                     }`}
                                   >
                                     {/* Left accent bar */}
