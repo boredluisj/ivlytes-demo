@@ -14,8 +14,8 @@ export default function AvatarPlaceholder({ initials, size = "md", className = "
 
   return (
     <div
-      className={`${sizes[size]} rounded-full flex items-center justify-center font-sora font-bold text-[#0F1419] flex-shrink-0 ${className}`}
-      style={{ background: "linear-gradient(135deg, #00D9FF, #D4AF37)" }}
+      className={`${sizes[size]} rounded-full flex items-center justify-center font-sora font-bold text-[#0B1120] flex-shrink-0 ${className}`}
+      style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)" }}
       aria-label={`Avatar for ${initials}`}
     >
       {initials}

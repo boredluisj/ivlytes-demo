@@ -16,12 +16,12 @@ interface ButtonProps {
 
 const variants = {
   primary:
-    "bg-[#00D9FF] text-[#0F1419] hover:bg-[#00D9FF]/90 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] font-semibold",
+    "bg-[#2DD4BF] text-[#0B1120] hover:bg-[#2DD4BF]/90 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] font-semibold",
   secondary:
-    "bg-white/[0.05] border border-white/[0.08] text-[#F5F5F5] hover:bg-white/[0.09] hover:border-[#00D9FF]/30",
-  ghost: "text-[#A0AEC0] hover:text-[#00D9FF] hover:bg-white/[0.04]",
+    "bg-white/[0.05] border border-white/[0.08] text-[#F0EDE8] hover:bg-white/[0.09] hover:border-[#2DD4BF]/30",
+  ghost: "text-[#9BA8BB] hover:text-[#2DD4BF] hover:bg-white/[0.04]",
   outline:
-    "border border-[#00D9FF]/40 text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0F1419] font-semibold",
+    "border border-[#2DD4BF]/40 text-[#2DD4BF] hover:bg-[#2DD4BF] hover:text-[#0B1120] font-semibold",
 };
 
 const sizes = {
@@ -43,7 +43,7 @@ export default function Button({
   ariaLabel,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#00D9FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F1419] disabled:opacity-50 disabled:cursor-not-allowed",
+    "inline-flex items-center justify-center gap-2 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-[#2DD4BF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1120] disabled:opacity-50 disabled:cursor-not-allowed",
     variants[variant],
     sizes[size],
     className

@@ -27,9 +27,9 @@ const jsonLd = {
 const benefits = ["Wrinkle and fine line reduction", "Acne scar improvement", "Enlarged pore refinement", "Hyperpigmentation and sun damage", "Stretch mark reduction", "Rosacea improvement", "Overall skin texture and tone", "Minimal downtime (2–4 days)"];
 
 const phases = [
-  { num: "1", name: "Inflammation", timing: "Days 1–2", desc: "Micro-injuries signal your immune system. Growth factors flood the treatment area. The wound healing cascade begins.", color: "#00D9FF" },
-  { num: "2", name: "Proliferation", timing: "Days 3–14", desc: "Fibroblasts activate and synthesize new collagen and elastin. Your skin physically rebuilds itself with fresh, healthy tissue.", color: "#D4AF37" },
-  { num: "3", name: "Remodeling", timing: "Weeks 3–24", desc: "New collagen matures and reorganizes. Results continue improving for up to 6 months after treatment.", color: "#00D9FF" },
+  { num: "1", name: "Inflammation", timing: "Days 1–2", desc: "Micro-injuries signal your immune system. Growth factors flood the treatment area. The wound healing cascade begins.", color: "#2DD4BF" },
+  { num: "2", name: "Proliferation", timing: "Days 3–14", desc: "Fibroblasts activate and synthesize new collagen and elastin. Your skin physically rebuilds itself with fresh, healthy tissue.", color: "#2DD4BF" },
+  { num: "3", name: "Remodeling", timing: "Weeks 3–24", desc: "New collagen matures and reorganizes. Results continue improving for up to 6 months after treatment.", color: "#2DD4BF" },
 ];
 
 const contraindications = ["Active skin cancer in treatment area", "Open wounds or active skin infections", "Pregnancy", "Current isotretinoin (Accutane) use or within 6 months", "Bleeding disorders or anticoagulant therapy", "Active acne flare in treatment area"];
@@ -43,23 +43,23 @@ export default function SkinPenPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <Image src="/images/services/skinpen.jpg" alt="SkinPen microneedling treatment" fill className="object-cover opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1419] via-[#0F1419]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120] via-[#0B1120]/80 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <AnimateOnScroll>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#00D9FF] mb-4">SkinPen Microneedling</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F5F5F5] mb-4 leading-tight">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#2DD4BF] mb-4">SkinPen Microneedling</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F0EDE8] mb-4 leading-tight">
               Clinically Proven.<br />
-              <span style={{ background: "linear-gradient(135deg, #00D9FF, #D4AF37)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              <span style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Minimal Downtime.
               </span>
             </h1>
-            <p className="text-xl text-[#A0AEC0] max-w-xl mb-8">
+            <p className="text-xl text-[#9BA8BB] max-w-xl mb-8">
               The only FDA-cleared microneedling device. Proven to improve wrinkles, acne scars, and dark spots in as few as 3 treatments spaced 30 days apart.
             </p>
             <div className="flex flex-wrap gap-3">
               {["FDA-Cleared Device", "15–30 Min Sessions", "3 Sessions Recommended", "Minimal Downtime"].map((b) => (
-                <span key={b} className="px-3 py-1 text-xs rounded-full bg-[#00D9FF]/10 border border-[#00D9FF]/20 text-[#00D9FF]">{b}</span>
+                <span key={b} className="px-3 py-1 text-xs rounded-full bg-[#2DD4BF]/10 border border-[#2DD4BF]/20 text-[#2DD4BF]">{b}</span>
               ))}
             </div>
           </AnimateOnScroll>
@@ -67,25 +67,25 @@ export default function SkinPenPage() {
       </section>
 
       {/* 3 Phases */}
-      <section className="py-24 bg-[#080C10]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-12">
             <SectionHeading label="The Science" title="How Microneedling Heals Your Skin" subtitle="Understanding the 3-phase healing response that makes microneedling so effective." centered />
           </AnimateOnScroll>
           <div className="relative">
             {/* Connecting line */}
-            <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-[#00D9FF]/30 via-[#D4AF37]/30 to-[#00D9FF]/30" />
+            <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-[#2DD4BF]/30 via-[#2DD4BF]/30 to-[#2DD4BF]/30" />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {phases.map((p, i) => (
                 <AnimateOnScroll key={p.num} delay={i * 0.1}>
                   <div className="text-center relative">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-sora font-bold text-[#0F1419] relative z-10"
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-sora font-bold text-[#0B1120] relative z-10"
                       style={{ background: `linear-gradient(135deg, ${p.color}, ${p.color}90)` }}>
                       {p.num}
                     </div>
                     <div className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: p.color }}>{p.timing}</div>
-                    <h3 className="font-sora font-semibold text-[#F5F5F5] mb-3">Phase {p.num}: {p.name}</h3>
-                    <p className="text-sm text-[#A0AEC0] leading-relaxed">{p.desc}</p>
+                    <h3 className="font-sora font-semibold text-[#F0EDE8] mb-3">Phase {p.num}: {p.name}</h3>
+                    <p className="text-sm text-[#9BA8BB] leading-relaxed">{p.desc}</p>
                   </div>
                 </AnimateOnScroll>
               ))}
@@ -95,7 +95,7 @@ export default function SkinPenPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 bg-[#0F1419]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-12">
             <SectionHeading label="Benefits" title="What Microneedling Treats" />
@@ -104,8 +104,8 @@ export default function SkinPenPage() {
             {benefits.map((b, i) => (
               <AnimateOnScroll key={b} delay={i * 0.05}>
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <Check className="w-4 h-4 text-[#00D9FF] flex-shrink-0" />
-                  <span className="text-sm text-[#A0AEC0]">{b}</span>
+                  <Check className="w-4 h-4 text-[#2DD4BF] flex-shrink-0" />
+                  <span className="text-sm text-[#9BA8BB]">{b}</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -114,7 +114,7 @@ export default function SkinPenPage() {
       </section>
 
       {/* Treatment Details */}
-      <section className="py-16 bg-[#080C10]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -125,8 +125,8 @@ export default function SkinPenPage() {
                 { label: "Recovery Time", value: "2–4 days pink" },
               ].map((d) => (
                 <div key={d.label} className="text-center p-4 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <div className="text-xl font-sora font-bold text-[#00D9FF] mb-1">{d.value}</div>
-                  <div className="text-xs text-[#A0AEC0]">{d.label}</div>
+                  <div className="text-xl font-sora font-bold text-[#2DD4BF] mb-1">{d.value}</div>
+                  <div className="text-xs text-[#9BA8BB]">{d.label}</div>
                 </div>
               ))}
             </div>
@@ -135,30 +135,30 @@ export default function SkinPenPage() {
       </section>
 
       {/* Contraindications */}
-      <section className="py-16 bg-[#0F1419]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <GlassCard className="p-8">
               <div className="flex items-center gap-3 mb-6">
-                <AlertCircle className="w-5 h-5 text-[#D4AF37]" />
-                <h2 className="font-sora font-semibold text-[#F5F5F5]">Who Should Not Get Microneedling</h2>
+                <AlertCircle className="w-5 h-5 text-[#2DD4BF]" />
+                <h2 className="font-sora font-semibold text-[#F0EDE8]">Who Should Not Get Microneedling</h2>
               </div>
               <ul className="space-y-3">
                 {contraindications.map((c) => (
-                  <li key={c} className="flex items-start gap-3 text-sm text-[#A0AEC0]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] mt-2 flex-shrink-0" />
+                  <li key={c} className="flex items-start gap-3 text-sm text-[#9BA8BB]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF] mt-2 flex-shrink-0" />
                     {c}
                   </li>
                 ))}
               </ul>
-              <p className="text-xs text-[#A0AEC0]/70 mt-6">Not sure if you qualify? Call us at <a href="tel:2816669211" className="text-[#00D9FF]">(281) 666-9211</a> for a quick consultation.</p>
+              <p className="text-xs text-[#9BA8BB]/70 mt-6">Not sure if you qualify? Call us at <a href="tel:2816669211" className="text-[#2DD4BF]">(281) 666-9211</a> for a quick consultation.</p>
             </GlassCard>
           </AnimateOnScroll>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#080C10]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-10"><SectionHeading label="FAQ" title="Microneedling Questions" /></AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
@@ -170,8 +170,8 @@ export default function SkinPenPage() {
                 { q: "Can I wear makeup afterward?", a: "Avoid makeup for 24–48 hours post-treatment. Your skin needs to breathe and recover without occlusive products during the early inflammation phase." },
               ].map((item) => (
                 <div key={item.q} className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <h3 className="text-sm font-semibold text-[#F5F5F5] mb-2">{item.q}</h3>
-                  <p className="text-sm text-[#A0AEC0]">{item.a}</p>
+                  <h3 className="text-sm font-semibold text-[#F0EDE8] mb-2">{item.q}</h3>
+                  <p className="text-sm text-[#9BA8BB]">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -179,9 +179,9 @@ export default function SkinPenPage() {
         </div>
       </section>
 
-      <div className="py-4 bg-[#080C10] border-t border-white/[0.06]">
+      <div className="py-4 bg-[#0B1120] border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-[#A0AEC0]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+          <p className="text-xs text-[#9BA8BB]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease.</p>
         </div>
       </div>
 

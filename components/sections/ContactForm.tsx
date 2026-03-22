@@ -26,8 +26,8 @@ const services = [
   "General Inquiry",
 ];
 
-const inputClass = "w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-[#F5F5F5] text-sm placeholder:text-[#A0AEC0]/50 focus:outline-none focus:border-[#00D9FF]/50 focus:bg-white/[0.06] transition-all";
-const labelClass = "block text-xs font-medium text-[#A0AEC0] mb-1.5";
+const inputClass = "w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-[#F0EDE8] text-sm placeholder:text-[#9BA8BB]/50 focus:outline-none focus:border-[#2DD4BF]/50 focus:bg-white/[0.06] transition-all";
+const labelClass = "block text-xs font-medium text-[#9BA8BB] mb-1.5";
 const errorClass = "text-xs text-red-400 mt-1";
 
 export default function ContactForm() {
@@ -46,9 +46,9 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <CheckCircle className="w-12 h-12 text-[#00D9FF] mx-auto mb-4" />
-        <h3 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-2">Message Sent!</h3>
-        <p className="text-[#A0AEC0]">We&apos;ll get back to you within 1 business day. For faster response, call <a href="tel:2816669211" className="text-[#00D9FF]">(281) 666-9211</a>.</p>
+        <CheckCircle className="w-12 h-12 text-[#2DD4BF] mx-auto mb-4" />
+        <h3 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-2">Message Sent!</h3>
+        <p className="text-[#9BA8BB]">We&apos;ll get back to you within 1 business day. For faster response, call <a href="tel:2816669211" className="text-[#2DD4BF]">(281) 666-9211</a>.</p>
       </div>
     );
   }
@@ -99,14 +99,14 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#00D9FF] text-[#0F1419] font-semibold rounded-xl hover:bg-[#00D9FF]/90 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+        className="w-full flex items-center justify-center gap-2 py-3.5 bg-[#2DD4BF] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2DD4BF]/90 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : <><Send className="w-4 h-4" /> Send Message</>}
       </button>
 
-      <p className="text-xs text-[#A0AEC0]/60 text-center">
-        For immediate appointments, call <a href="tel:2816669211" className="text-[#00D9FF]">(281) 666-9211</a> or{" "}
-        <a href="https://www.vagaro.com/ivlytes/book-now" target="_blank" rel="noopener noreferrer" className="text-[#00D9FF]">book online via Vagaro</a>.
+      <p className="text-xs text-[#9BA8BB]/60 text-center">
+        For immediate appointments, call <a href="tel:2816669211" className="text-[#2DD4BF]">(281) 666-9211</a> or{" "}
+        <a href="https://www.vagaro.com/ivlytes/book-now" target="_blank" rel="noopener noreferrer" className="text-[#2DD4BF]">book online via Vagaro</a>.
       </p>
     </form>
   );

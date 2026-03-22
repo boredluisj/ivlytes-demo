@@ -11,7 +11,7 @@ export default function BlogPreview() {
   const latest = blogPosts.slice(0, 3);
 
   return (
-    <section className="py-24 bg-[#0F1419]" aria-labelledby="blog-preview-heading">
+    <section className="py-24 bg-[#0B1120]" aria-labelledby="blog-preview-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
           <SectionHeading
@@ -21,7 +21,7 @@ export default function BlogPreview() {
           />
           <Link
             href="/blog"
-            className="flex items-center gap-2 text-sm text-[#00D9FF] hover:text-[#00D9FF]/80 font-semibold transition-colors flex-shrink-0"
+            className="flex items-center gap-2 text-sm text-[#2DD4BF] hover:text-[#2DD4BF]/80 font-semibold transition-colors flex-shrink-0"
           >
             Read All Articles
             <ArrowRight className="w-4 h-4" />
@@ -35,15 +35,15 @@ export default function BlogPreview() {
                 <GlassCard hover className="p-6 h-full flex flex-col">
                   <div className="flex items-center justify-between mb-4">
                     <Badge>{post.category}</Badge>
-                    <span className="text-xs text-[#A0AEC0]">{post.readTime} min read</span>
+                    <span className="text-xs text-[#9BA8BB]">{post.readTime} min read</span>
                   </div>
-                  <h3 className="font-sora font-semibold text-[#F5F5F5] text-base leading-snug mb-3 group-hover:text-[#00D9FF] transition-colors flex-grow">
+                  <h3 className="font-sora font-semibold text-[#F0EDE8] text-base leading-snug mb-3 group-hover:text-[#2DD4BF] transition-colors flex-grow">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-[#A0AEC0] line-clamp-2 mb-4">{post.excerpt}</p>
+                  <p className="text-sm text-[#9BA8BB] line-clamp-2 mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-white/[0.06] mt-auto">
-                    <span className="text-xs text-[#A0AEC0]">{formatDate(post.date)}</span>
-                    <span className="text-xs text-[#00D9FF] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-xs text-[#9BA8BB]">{formatDate(post.date)}</span>
+                    <span className="text-xs text-[#2DD4BF] flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                       Read more <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>

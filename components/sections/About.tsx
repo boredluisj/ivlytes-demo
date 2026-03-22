@@ -14,7 +14,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="py-24 bg-[#0F1419]" aria-labelledby="about-heading">
+    <section className="py-24 bg-[#0B1120]" aria-labelledby="about-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Stats */}
@@ -23,7 +23,7 @@ export default function About() {
               <SectionHeading
                 label="About Us"
                 title="Physician-Led Wellness in Kingwood"
-                subtitle="Founded by Dr. Arif Shahzad MD, IV-LYTES brings evidence-based integrative medicine to Kingwood, TX. Every treatment is physician-supervised — not delegated to staff."
+                subtitle="Founded by Dr. Arif Shahzad MD, IV-LYTES brings evidence-based integrative medicine to Kingwood, TX. Every treatment is physician-supervised. Not delegated to staff."
                 className="mb-10"
               />
 
@@ -33,7 +33,7 @@ export default function About() {
                     <div
                       className="text-3xl font-sora font-bold mb-1"
                       style={{
-                        background: "linear-gradient(135deg, #00D9FF, #D4AF37)",
+                        background: "linear-gradient(135deg, #2DD4BF, #4FE5D3)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         backgroundClip: "text",
@@ -41,14 +41,14 @@ export default function About() {
                     >
                       {stat.value}
                     </div>
-                    <div className="text-sm text-[#A0AEC0]">{stat.label}</div>
+                    <div className="text-sm text-[#9BA8BB]">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
               <Link
                 href="/staff"
-                className="inline-flex items-center gap-2 text-[#00D9FF] hover:text-[#00D9FF]/80 font-semibold text-sm transition-colors"
+                className="inline-flex items-center gap-2 text-[#2DD4BF] hover:text-[#2DD4BF]/80 font-semibold text-sm transition-colors"
               >
                 Meet Our Team
                 <ArrowRight className="w-4 h-4" />
@@ -70,13 +70,13 @@ export default function About() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-xl font-sora font-bold text-[#F5F5F5]">Dr. Arif Shahzad MD</h3>
-                  <p className="text-sm text-[#00D9FF] mb-3">Owner & Medical Director</p>
+                  <h3 className="text-xl font-sora font-bold text-[#F0EDE8]">Dr. Arif Shahzad MD</h3>
+                  <p className="text-sm text-[#2DD4BF] mb-3">Owner & Medical Director</p>
                   <div className="flex flex-wrap gap-2">
                     {["MD", "BioTE Certified", "GLP-1 Specialist"].map((cred) => (
                       <span
                         key={cred}
-                        className="px-2.5 py-0.5 text-xs rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#D4AF37] font-medium"
+                        className="px-2.5 py-0.5 text-xs rounded-full bg-[#2DD4BF]/10 border border-[#2DD4BF]/20 text-[#2DD4BF] font-medium"
                       >
                         {cred}
                       </span>
@@ -84,18 +84,15 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <p className="text-sm text-[#A0AEC0] leading-relaxed">
-                Dr. Shahzad leads IV-LYTES & Wellness with a commitment to evidence-based integrative medicine.
-                Specializing in IV therapy, bioidentical hormone replacement, and medical weight loss, he brings
-                physician-level oversight to every treatment at our Kingwood clinic. His approach: science-backed
-                protocols, individualized care, and results that actually show.
+              <p className="text-sm text-[#9BA8BB] leading-relaxed">
+                Dr. Shahzad opened IV-LYTES in Kingwood after 15+ years practicing medicine. He got tired of the 10-minute appointment model, where patients leave with a prescription and no real answers. At IV-LYTES, he personally oversees every protocol. Being cash-pay means no insurance company gets to decide what care you receive.
               </p>
               <div className="mt-6 pt-5 border-t border-white/[0.06]">
                 <a
                   href="tel:2816669211"
-                  className="text-sm text-[#A0AEC0] hover:text-[#00D9FF] transition-colors"
+                  className="text-sm text-[#9BA8BB] hover:text-[#2DD4BF] transition-colors"
                 >
-                  Free BioTE consultations: <span className="text-[#00D9FF]">(281) 666-9211</span>
+                  Free BioTE consultations: <span className="text-[#2DD4BF]">(281) 666-9211</span>
                 </a>
               </div>
             </GlassCard>

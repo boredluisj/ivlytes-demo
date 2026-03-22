@@ -31,7 +31,7 @@ const quickLinks = [
 
 export default function ResourcesPage() {
   return (
-    <section className="pt-24 pb-24 bg-[#0F1419]">
+    <section className="pt-24 pb-24 bg-[#0B1120]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="mb-16">
           <SectionHeading
@@ -43,17 +43,17 @@ export default function ResourcesPage() {
 
         {/* Hours reminder */}
         <AnimateOnScroll className="mb-12">
-          <div className="flex flex-col sm:flex-row gap-4 p-5 rounded-xl bg-[#00D9FF]/[0.06] border border-[#00D9FF]/20">
+          <div className="flex flex-col sm:flex-row gap-4 p-5 rounded-xl bg-[#2DD4BF]/[0.06] border border-[#2DD4BF]/20">
             <div className="flex items-center gap-3">
-              <Clock className="w-5 h-5 text-[#00D9FF] flex-shrink-0" />
+              <Clock className="w-5 h-5 text-[#2DD4BF] flex-shrink-0" />
               <div>
-                <span className="text-sm font-medium text-[#F5F5F5]">Clinic Hours:</span>
-                <span className="text-sm text-[#A0AEC0] ml-2">Mon–Thu 9am–6pm | Fri 9am–1pm | Sat–Sun Closed</span>
+                <span className="text-sm font-medium text-[#F0EDE8]">Clinic Hours:</span>
+                <span className="text-sm text-[#9BA8BB] ml-2">Mon–Thu 9am–6pm | Fri 9am–1pm | Sat–Sun Closed</span>
               </div>
             </div>
             <div className="flex items-center gap-3 sm:ml-auto">
-              <Phone className="w-5 h-5 text-[#00D9FF] flex-shrink-0" />
-              <a href="tel:2816669211" className="text-sm text-[#00D9FF] font-semibold hover:underline">(281) 666-9211</a>
+              <Phone className="w-5 h-5 text-[#2DD4BF] flex-shrink-0" />
+              <a href="tel:2816669211" className="text-sm text-[#2DD4BF] font-semibold hover:underline">(281) 666-9211</a>
             </div>
           </div>
         </AnimateOnScroll>
@@ -62,7 +62,7 @@ export default function ResourcesPage() {
           {/* Downloads */}
           <div>
             <AnimateOnScroll className="mb-6">
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5]">Patient Guides &amp; Downloads</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8]">Patient Guides &amp; Downloads</h2>
             </AnimateOnScroll>
             <div className="space-y-4">
               {guides.map((guide, i) => (
@@ -70,26 +70,26 @@ export default function ResourcesPage() {
                   {guide.internal ? (
                     <Link href={guide.href}>
                       <GlassCard hover className="p-5 flex items-center gap-4 cursor-pointer">
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #00D9FF20, #D4AF3720)" }}>
-                          <FileText className="w-5 h-5 text-[#00D9FF]" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+                          <FileText className="w-5 h-5 text-[#2DD4BF]" />
                         </div>
                         <div className="flex-grow">
-                          <div className="text-sm font-semibold text-[#F5F5F5]">{guide.title}</div>
-                          <div className="text-xs text-[#A0AEC0]">{guide.desc}</div>
+                          <div className="text-sm font-semibold text-[#F0EDE8]">{guide.title}</div>
+                          <div className="text-xs text-[#9BA8BB]">{guide.desc}</div>
                         </div>
-                        <ExternalLink className="w-4 h-4 text-[#A0AEC0]" />
+                        <ExternalLink className="w-4 h-4 text-[#9BA8BB]" />
                       </GlassCard>
                     </Link>
                   ) : (
                     <GlassCard className="p-5 flex items-center gap-4 opacity-60">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #A0AEC020, #A0AEC020)" }}>
-                        <Download className="w-5 h-5 text-[#A0AEC0]" />
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #9BA8BB20, #9BA8BB20)" }}>
+                        <Download className="w-5 h-5 text-[#9BA8BB]" />
                       </div>
                       <div className="flex-grow">
-                        <div className="text-sm font-semibold text-[#F5F5F5]">{guide.title}</div>
-                        <div className="text-xs text-[#A0AEC0]">{guide.desc}</div>
+                        <div className="text-sm font-semibold text-[#F0EDE8]">{guide.title}</div>
+                        <div className="text-xs text-[#9BA8BB]">{guide.desc}</div>
                       </div>
-                      <span className="text-xs text-[#A0AEC0]/60 italic">Coming soon</span>
+                      <span className="text-xs text-[#9BA8BB]/60 italic">Coming soon</span>
                       {/* TODO: Add PDF link from client */}
                     </GlassCard>
                   )}
@@ -101,7 +101,7 @@ export default function ResourcesPage() {
           {/* Quick Links */}
           <div>
             <AnimateOnScroll className="mb-6">
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5]">Quick Links</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8]">Quick Links</h2>
             </AnimateOnScroll>
             <div className="space-y-4">
               {quickLinks.map((link, i) => (
@@ -109,25 +109,25 @@ export default function ResourcesPage() {
                   {link.external ? (
                     <a href={link.href} target="_blank" rel="noopener noreferrer">
                       <GlassCard hover className="p-5 flex items-center gap-4 cursor-pointer">
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #D4AF3720, #00D9FF20)" }}>
-                          <link.icon className="w-5 h-5 text-[#D4AF37]" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+                          <link.icon className="w-5 h-5 text-[#2DD4BF]" />
                         </div>
                         <div className="flex-grow">
-                          <div className="text-sm font-semibold text-[#F5F5F5]">{link.title}</div>
-                          <div className="text-xs text-[#A0AEC0]">{link.desc}</div>
+                          <div className="text-sm font-semibold text-[#F0EDE8]">{link.title}</div>
+                          <div className="text-xs text-[#9BA8BB]">{link.desc}</div>
                         </div>
-                        <ExternalLink className="w-4 h-4 text-[#A0AEC0]" />
+                        <ExternalLink className="w-4 h-4 text-[#9BA8BB]" />
                       </GlassCard>
                     </a>
                   ) : (
                     <Link href={link.href}>
                       <GlassCard hover className="p-5 flex items-center gap-4 cursor-pointer">
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #D4AF3720, #00D9FF20)" }}>
-                          <link.icon className="w-5 h-5 text-[#D4AF37]" />
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+                          <link.icon className="w-5 h-5 text-[#2DD4BF]" />
                         </div>
                         <div className="flex-grow">
-                          <div className="text-sm font-semibold text-[#F5F5F5]">{link.title}</div>
-                          <div className="text-xs text-[#A0AEC0]">{link.desc}</div>
+                          <div className="text-sm font-semibold text-[#F0EDE8]">{link.title}</div>
+                          <div className="text-xs text-[#9BA8BB]">{link.desc}</div>
                         </div>
                       </GlassCard>
                     </Link>

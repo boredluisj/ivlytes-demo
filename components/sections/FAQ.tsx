@@ -44,9 +44,9 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
         id={`faq-btn-${index}`}
         aria-controls={`faq-panel-${index}`}
       >
-        <span className="text-base font-medium text-[#F5F5F5] pr-4">{question}</span>
+        <span className="text-base font-medium text-[#F0EDE8] pr-4">{question}</span>
         <ChevronDown
-          className={`w-5 h-5 text-[#00D9FF] flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-5 h-5 text-[#2DD4BF] flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
       </button>
       <AnimatePresence initial={false}>
@@ -61,7 +61,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
             transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm text-[#A0AEC0] leading-relaxed">{answer}</p>
+            <p className="pb-5 text-sm text-[#9BA8BB] leading-relaxed">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -71,7 +71,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 
 export default function FAQ() {
   return (
-    <section className="py-24 bg-[#080C10]" aria-labelledby="faq-heading">
+    <section className="py-24 bg-[#0B1120]" aria-labelledby="faq-heading">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="mb-12 text-center">
           <SectionHeading
@@ -93,7 +93,7 @@ export default function FAQ() {
         <AnimateOnScroll delay={0.2} className="mt-10 text-center">
           <Link
             href="/contact"
-            className="text-sm text-[#00D9FF] hover:text-[#00D9FF]/80 font-medium transition-colors"
+            className="text-sm text-[#2DD4BF] hover:text-[#2DD4BF]/80 font-medium transition-colors"
           >
             Still have questions? Contact us →
           </Link>

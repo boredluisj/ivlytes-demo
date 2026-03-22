@@ -33,23 +33,23 @@ export default function ColonicPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <Image src="/images/services/colonic.jpg" alt="Colonic hydrotherapy service" fill className="object-cover opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1419] via-[#0F1419]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120] via-[#0B1120]/80 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <AnimateOnScroll>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#00D9FF] mb-4">Colonic Hydrotherapy</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F5F5F5] mb-4 leading-tight">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#2DD4BF] mb-4">Colonic Hydrotherapy</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F0EDE8] mb-4 leading-tight">
               Cleanse. Reset.{" "}
-              <span style={{ background: "linear-gradient(135deg, #00D9FF, #D4AF37)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              <span style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Restore.
               </span>
             </h1>
-            <p className="text-xl text-[#A0AEC0] max-w-xl mb-8">
+            <p className="text-xl text-[#9BA8BB] max-w-xl mb-8">
               Modern open-system colonic hydrotherapy in complete privacy. Physician-supervised. You&apos;re always in control.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Complete Privacy", "Open-System Technology", "Physician Supervised", "Lunchtime Treatment"].map((b) => (
-                <span key={b} className="px-3 py-1 text-xs rounded-full bg-[#00D9FF]/10 border border-[#00D9FF]/20 text-[#00D9FF]">{b}</span>
+                <span key={b} className="px-3 py-1 text-xs rounded-full bg-[#2DD4BF]/10 border border-[#2DD4BF]/20 text-[#2DD4BF]">{b}</span>
               ))}
             </div>
           </AnimateOnScroll>
@@ -57,7 +57,7 @@ export default function ColonicPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24 bg-[#080C10]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-12">
             <SectionHeading label="Pricing" title="Choose Your Package" subtitle="All packages include physician supervision and complete privacy." centered />
@@ -98,7 +98,7 @@ export default function ColonicPage() {
       </section>
 
       {/* Benefits */}
-      <section className="py-24 bg-[#0F1419]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-12">
             <SectionHeading label="Benefits" title="Why Colonic Hydrotherapy Works" />
@@ -107,11 +107,11 @@ export default function ColonicPage() {
             {benefits.map((b, i) => (
               <AnimateOnScroll key={b.title} delay={i * 0.07}>
                 <GlassCard hover className="p-6">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ background: "linear-gradient(135deg, #00D9FF20, #D4AF3720)" }}>
-                    <b.icon className="w-5 h-5 text-[#00D9FF]" />
+                  <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+                    <b.icon className="w-5 h-5 text-[#2DD4BF]" />
                   </div>
-                  <h3 className="font-sora font-semibold text-[#F5F5F5] mb-2">{b.title}</h3>
-                  <p className="text-sm text-[#A0AEC0]">{b.desc}</p>
+                  <h3 className="font-sora font-semibold text-[#F0EDE8] mb-2">{b.title}</h3>
+                  <p className="text-sm text-[#9BA8BB]">{b.desc}</p>
                 </GlassCard>
               </AnimateOnScroll>
             ))}
@@ -120,17 +120,17 @@ export default function ColonicPage() {
       </section>
 
       {/* Privacy section */}
-      <section className="py-16 bg-[#080C10]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll>
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "linear-gradient(135deg, #00D9FF20, #D4AF3720)" }}>
-              <Shield className="w-7 h-7 text-[#00D9FF]" />
+            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+              <Shield className="w-7 h-7 text-[#2DD4BF]" />
             </div>
-            <h2 className="text-3xl font-sora font-bold text-[#F5F5F5] mb-4">Complete Privacy. Open-System Technology.</h2>
-            <p className="text-[#A0AEC0] leading-relaxed mb-6">
+            <h2 className="text-3xl font-sora font-bold text-[#F0EDE8] mb-4">Complete Privacy. Open-System Technology.</h2>
+            <p className="text-[#9BA8BB] leading-relaxed mb-6">
               Unlike traditional colonics, our open-system technology puts you fully in control. You self-administer the slender rectal nozzle in complete privacy — there is no therapist in the room during your session. Waste exits through a closed tube system. No odor, no embarrassment.
             </p>
-            <p className="text-sm text-[#A0AEC0]/70">
+            <p className="text-sm text-[#9BA8BB]/70">
               Most patients return to normal activities immediately. Many come on their lunch break.
             </p>
           </AnimateOnScroll>
@@ -138,7 +138,7 @@ export default function ColonicPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#0F1419]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-10">
             <SectionHeading label="FAQ" title="Colonic Questions" />
@@ -153,8 +153,8 @@ export default function ColonicPage() {
                 { q: "Is colonic hydrotherapy safe?", a: "Yes, with modern equipment and physician oversight. We review your health history before every session. Colonics are not recommended for certain medical conditions — we screen for these." },
               ].map((item) => (
                 <div key={item.q} className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <h3 className="text-sm font-semibold text-[#F5F5F5] mb-2">{item.q}</h3>
-                  <p className="text-sm text-[#A0AEC0]">{item.a}</p>
+                  <h3 className="text-sm font-semibold text-[#F0EDE8] mb-2">{item.q}</h3>
+                  <p className="text-sm text-[#9BA8BB]">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -162,9 +162,9 @@ export default function ColonicPage() {
         </div>
       </section>
 
-      <div className="py-4 bg-[#0F1419] border-t border-white/[0.06]">
+      <div className="py-4 bg-[#0B1120] border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-[#A0AEC0]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease.</p>
+          <p className="text-xs text-[#9BA8BB]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease.</p>
         </div>
       </div>
 

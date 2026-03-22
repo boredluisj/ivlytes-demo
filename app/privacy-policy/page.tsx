@@ -10,29 +10,29 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <section className="pt-24 pb-24 bg-[#0F1419]">
+    <section className="pt-24 pb-24 bg-[#0B1120]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="mb-8">
           <GlassCard className="p-5 flex items-start gap-4">
-            <AlertCircle className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-            <p className="text-sm text-[#A0AEC0]">
-              <strong className="text-[#F5F5F5]">Attorney Review Disclaimer:</strong> This privacy policy has been prepared for informational purposes. Please consult a qualified healthcare attorney to ensure compliance with applicable state and federal laws, including HIPAA.
+            <AlertCircle className="w-5 h-5 text-[#2DD4BF] flex-shrink-0 mt-0.5" />
+            <p className="text-sm text-[#9BA8BB]">
+              <strong className="text-[#F0EDE8]">Attorney Review Disclaimer:</strong> This privacy policy has been prepared for informational purposes. Please consult a qualified healthcare attorney to ensure compliance with applicable state and federal laws, including HIPAA.
             </p>
           </GlassCard>
         </AnimateOnScroll>
 
         <AnimateOnScroll>
-          <h1 className="text-3xl font-sora font-bold text-[#F5F5F5] mb-4">Privacy Policy</h1>
-          <p className="text-sm text-[#A0AEC0] mb-10">Last updated: January 1, 2025 | IV-LYTES & Wellness — BAABA LLC</p>
+          <h1 className="text-3xl font-sora font-bold text-[#F0EDE8] mb-4">Privacy Policy</h1>
+          <p className="text-sm text-[#9BA8BB] mb-10">Last updated: January 1, 2025 | IV-LYTES & Wellness — BAABA LLC</p>
 
-          <div className="space-y-8 text-[#A0AEC0] text-sm leading-relaxed">
+          <div className="space-y-8 text-[#9BA8BB] text-sm leading-relaxed">
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">1. Introduction</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">1. Introduction</h2>
               <p>IV-LYTES &amp; Wellness, operated by BAABA LLC (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;), is committed to protecting your privacy and the confidentiality of your protected health information (PHI) in compliance with the Health Insurance Portability and Accountability Act (HIPAA) and applicable state laws.</p>
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">2. Information We Collect</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">2. Information We Collect</h2>
               <p className="mb-3">We may collect the following types of information:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Personal identification information (name, address, phone number, email)</li>
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">3. How We Use Your Information</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">3. How We Use Your Information</h2>
               <p className="mb-3">We use your information to:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Provide and improve our medical wellness services</li>
@@ -57,7 +57,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">4. HIPAA Compliance</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">4. HIPAA Compliance</h2>
               <p>As a medical wellness provider, we are committed to HIPAA compliance. Your protected health information (PHI) is handled with the highest level of care:</p>
               <ul className="list-disc list-inside space-y-1 ml-4 mt-3">
                 <li>PHI is shared only with treatment providers involved in your care</li>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">5. Information Sharing</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">5. Information Sharing</h2>
               <p>We do not sell, trade, or rent your personal information to third parties. We may share information with:</p>
               <ul className="list-disc list-inside space-y-1 ml-4 mt-3">
                 <li>Healthcare providers involved in your treatment (with your authorization)</li>
@@ -80,17 +80,17 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">6. Data Security</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">6. Data Security</h2>
               <p>We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction. However, no internet transmission is completely secure — we cannot guarantee absolute security.</p>
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">7. Cookies and Analytics</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">7. Cookies and Analytics</h2>
               <p>Our website uses cookies and analytics tools (including Google Tag Manager) to understand how visitors use our site. You may disable cookies in your browser settings, though this may affect site functionality.</p>
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">8. Your Rights</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">8. Your Rights</h2>
               <p>You have the right to:</p>
               <ul className="list-disc list-inside space-y-1 ml-4 mt-3">
                 <li>Access your personal and health information</li>
@@ -102,13 +102,13 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-4">9. Contact Us</h2>
+              <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-4">9. Contact Us</h2>
               <p>For privacy-related questions or to exercise your rights, contact:</p>
               <div className="mt-3 p-4 rounded-xl bg-white/[0.04] border border-white/[0.07]">
                 <p>IV-LYTES &amp; Wellness — BAABA LLC</p>
                 <p>320 Kingwood Executive Dr., Suite D</p>
                 <p>Kingwood, TX 77339</p>
-                <p>Phone: <a href="tel:2816669211" className="text-[#00D9FF]">(281) 666-9211</a></p>
+                <p>Phone: <a href="tel:2816669211" className="text-[#2DD4BF]">(281) 666-9211</a></p>
               </div>
             </div>
           </div>

@@ -37,21 +37,21 @@ export default function BioTEPage() {
       <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0">
           <Image src="/images/services/biote.jpg" alt="BioTE hormone therapy" fill className="object-cover opacity-20" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1419] via-[#0F1419]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1120] via-[#0B1120]/80 to-transparent" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <AnimateOnScroll>
-            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-4">BioTE Hormone Therapy</span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F5F5F5] mb-4 leading-tight">
+            <span className="inline-block text-xs font-semibold uppercase tracking-widest text-[#2DD4BF] mb-4">BioTE Hormone Therapy</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sora font-bold text-[#F0EDE8] mb-4 leading-tight">
               Restore What<br />
-              <span style={{ background: "linear-gradient(135deg, #D4AF37, #00D9FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              <span style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                 Time Takes Away
               </span>
             </h1>
-            <p className="text-xl text-[#A0AEC0] max-w-xl mb-8">
+            <p className="text-xl text-[#9BA8BB] max-w-xl mb-8">
               Bioidentical hormone pellets structurally identical to your own hormones. Consistent, natural hormone delivery — no patches, no pills, no daily dosing.
             </p>
-            <a href="tel:2816669211" className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0F1419] font-semibold rounded-xl hover:bg-[#D4AF37]/90 transition-all">
+            <a href="tel:2816669211" className="inline-flex items-center gap-2 px-6 py-3 bg-[#2DD4BF] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2DD4BF]/90 transition-all">
               Free Consultation: (281) 666-9211
             </a>
           </AnimateOnScroll>
@@ -59,7 +59,7 @@ export default function BioTEPage() {
       </section>
 
       {/* How it works */}
-      <section className="py-24 bg-[#080C10]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-10">
             <SectionHeading label="How It Works" title="Pellets. Not Pills." subtitle="BioTE pellets are inserted subdermally (just under the skin) in a simple, in-office procedure. They dissolve gradually, releasing hormones steadily into the bloodstream — exactly like your body's own hormones would." />
@@ -72,12 +72,12 @@ export default function BioTEPage() {
                 { step: "3", title: "Steady Results", desc: "Hormones release gradually over 3–6 months. No daily dosing. No patches. No rollercoaster of highs and lows." },
               ].map((s, i) => (
                 <div key={s.step} className="text-center p-6 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-sora font-bold text-[#0F1419]"
-                    style={{ background: "linear-gradient(135deg, #D4AF37, #00D9FF)" }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-sora font-bold text-[#0B1120]"
+                    style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)" }}>
                     {s.step}
                   </div>
-                  <h3 className="font-sora font-semibold text-[#F5F5F5] mb-2">{s.title}</h3>
-                  <p className="text-sm text-[#A0AEC0]">{s.desc}</p>
+                  <h3 className="font-sora font-semibold text-[#F0EDE8] mb-2">{s.title}</h3>
+                  <p className="text-sm text-[#9BA8BB]">{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -86,7 +86,7 @@ export default function BioTEPage() {
       </section>
 
       {/* For Her / For Him */}
-      <section className="py-24 bg-[#0F1419]">
+      <section className="py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-12">
             <SectionHeading label="Benefits" title="Designed for Your Biology" />
@@ -95,13 +95,13 @@ export default function BioTEPage() {
             <AnimateOnScroll delay={0}>
               <GlassCard className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="px-3 py-1 rounded-full text-sm font-semibold" style={{ background: "linear-gradient(135deg, #D4AF37, #00D9FF)", color: "#0F1419" }}>For Her</div>
-                  <span className="text-[#A0AEC0] text-sm">Every 3–6 months</span>
+                  <div className="px-3 py-1 rounded-full text-sm font-semibold" style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)", color: "#0B1120" }}>For Her</div>
+                  <span className="text-[#9BA8BB] text-sm">Every 3–6 months</span>
                 </div>
                 <ul className="space-y-3">
                   {herBenefits.map((b) => (
-                    <li key={b} className="flex items-center gap-3 text-sm text-[#A0AEC0]">
-                      <Check className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+                    <li key={b} className="flex items-center gap-3 text-sm text-[#9BA8BB]">
+                      <Check className="w-4 h-4 text-[#2DD4BF] flex-shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -111,13 +111,13 @@ export default function BioTEPage() {
             <AnimateOnScroll delay={0.1}>
               <GlassCard className="p-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="px-3 py-1 rounded-full text-sm font-semibold" style={{ background: "linear-gradient(135deg, #00D9FF, #D4AF37)", color: "#0F1419" }}>For Him</div>
-                  <span className="text-[#A0AEC0] text-sm">Every 4–6 months</span>
+                  <div className="px-3 py-1 rounded-full text-sm font-semibold" style={{ background: "linear-gradient(135deg, #2DD4BF, #2DD4BF)", color: "#0B1120" }}>For Him</div>
+                  <span className="text-[#9BA8BB] text-sm">Every 4–6 months</span>
                 </div>
                 <ul className="space-y-3">
                   {hisBenefits.map((b) => (
-                    <li key={b} className="flex items-center gap-3 text-sm text-[#A0AEC0]">
-                      <Check className="w-4 h-4 text-[#00D9FF] flex-shrink-0" />
+                    <li key={b} className="flex items-center gap-3 text-sm text-[#9BA8BB]">
+                      <Check className="w-4 h-4 text-[#2DD4BF] flex-shrink-0" />
                       {b}
                     </li>
                   ))}
@@ -129,16 +129,16 @@ export default function BioTEPage() {
       </section>
 
       {/* Supplements CTA */}
-      <section className="py-16 bg-[#080C10]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimateOnScroll>
-            <h2 className="text-2xl font-sora font-bold text-[#F5F5F5] mb-4">BioTE Nutraceuticals</h2>
-            <p className="text-[#A0AEC0] mb-6">Complement your hormone therapy with BioTE&apos;s clinical-grade supplement line — DIM SGS+, ADK, Omega 3+CoQ10, and more. Available through our partner portal.</p>
+            <h2 className="text-2xl font-sora font-bold text-[#F0EDE8] mb-4">BioTE Nutraceuticals</h2>
+            <p className="text-[#9BA8BB] mb-6">Complement your hormone therapy with BioTE&apos;s clinical-grade supplement line — DIM SGS+, ADK, Omega 3+CoQ10, and more. Available through our partner portal.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/biote-store" className="px-6 py-3 bg-[#D4AF37]/10 border border-[#D4AF37]/30 text-[#D4AF37] font-semibold rounded-xl hover:bg-[#D4AF37] hover:text-[#0F1419] transition-all inline-flex items-center gap-2">
+              <Link href="/biote-store" className="px-6 py-3 bg-[#2DD4BF]/10 border border-[#2DD4BF]/30 text-[#2DD4BF] font-semibold rounded-xl hover:bg-[#2DD4BF] hover:text-[#0B1120] transition-all inline-flex items-center gap-2">
                 Browse BioTE Store <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="https://patients.shopbiote.com" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 text-[#F5F5F5] rounded-xl hover:border-[#00D9FF]/40 transition-all inline-flex items-center gap-2">
+              <a href="https://patients.shopbiote.com" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-white/20 text-[#F0EDE8] rounded-xl hover:border-[#2DD4BF]/40 transition-all inline-flex items-center gap-2">
                 Shop at patients.shopbiote.com <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -147,7 +147,7 @@ export default function BioTEPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 bg-[#0F1419]">
+      <section className="py-16 bg-[#0B1120]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-10"><SectionHeading label="FAQ" title="Hormone Therapy Questions" /></AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
@@ -159,8 +159,8 @@ export default function BioTEPage() {
                 { q: "What's the difference between BioTE and synthetic hormones?", a: "Synthetic hormones (like traditional HRT) have different molecular structures than your body's own hormones. Bioidentical hormones are structurally identical — your body's receptors cannot tell the difference." },
               ].map((item) => (
                 <div key={item.q} className="p-5 rounded-xl bg-white/[0.04] border border-white/[0.07]">
-                  <h3 className="text-sm font-semibold text-[#F5F5F5] mb-2">{item.q}</h3>
-                  <p className="text-sm text-[#A0AEC0]">{item.a}</p>
+                  <h3 className="text-sm font-semibold text-[#F0EDE8] mb-2">{item.q}</h3>
+                  <p className="text-sm text-[#9BA8BB]">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -168,9 +168,9 @@ export default function BioTEPage() {
         </div>
       </section>
 
-      <div className="py-4 bg-[#0F1419] border-t border-white/[0.06]">
+      <div className="py-4 bg-[#0B1120] border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs text-[#A0AEC0]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Please consult your physician.</p>
+          <p className="text-xs text-[#9BA8BB]/60 text-center">IV-LYTES does not accept insurance. All services are cash-pay. These services have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Please consult your physician.</p>
         </div>
       </div>
 

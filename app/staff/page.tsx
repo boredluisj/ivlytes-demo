@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function StaffPage() {
   return (
     <>
-      <section className="pt-24 pb-16 bg-[#0F1419]">
+      <section className="pt-24 pb-16 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="mb-16">
             <SectionHeading
@@ -46,39 +46,32 @@ export default function StaffPage() {
                   <div className="mt-4 space-y-2">
                     {["MD", "BioTE Certified", "GLP-1 Specialist", "IV Therapy Expert"].map((cred) => (
                       <div key={cred} className="flex items-center justify-center lg:justify-start gap-1.5">
-                        <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
-                        <span className="text-xs text-[#D4AF37] font-medium">{cred}</span>
+                        <Award className="w-3.5 h-3.5 text-[#2DD4BF]" />
+                        <span className="text-xs text-[#2DD4BF] font-medium">{cred}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-2xl font-sora font-bold text-[#F5F5F5] mb-1">Dr. Arif Shahzad MD</h2>
-                  <p className="text-[#00D9FF] font-medium mb-6">Owner &amp; Medical Director</p>
-                  <div className="space-y-4 text-[#A0AEC0] leading-relaxed">
+                  <h2 className="text-2xl font-sora font-bold text-[#F0EDE8] mb-1">Dr. Arif Shahzad MD</h2>
+                  <p className="text-[#2DD4BF] font-medium mb-6">Owner &amp; Medical Director</p>
+                  <div className="space-y-4 text-[#9BA8BB] leading-relaxed">
                     <p>
-                      Dr. Shahzad founded IV-LYTES &amp; Wellness with a singular mission: bring physician-level integrative
-                      medicine to Kingwood, TX. With deep expertise in IV therapy, bioidentical hormone replacement, and
-                      GLP-1 medically supervised weight loss, he provides the kind of individualized care that the standard
-                      medical system rarely offers.
+                      Dr. Shahzad opened IV-LYTES in Kingwood after 15+ years in medicine. He saw too many patients stuck in the revolving-door system: 10-minute appointments, a prescription, and no real answers. IV-LYTES is his answer to that.
                     </p>
                     <p>
-                      His approach is evidence-based and results-oriented. Every patient receives a thorough health history
-                      review before treatment. Every protocol is designed around your specific labs, goals, and health
-                      history — not a one-size-fits-all menu.
+                      Every patient gets a personal review before treatment. Every protocol is built around your labs, your goals, and your history. He does not run a one-size-fits-all clinic.
                     </p>
                     <p>
-                      Dr. Shahzad is BioTE certified and a GLP-1 specialist, bringing advanced training in bioidentical
-                      hormone replacement and medical weight loss to a community that has been underserved by these
-                      emerging therapies.
+                      BioTE certified and trained in GLP-1 weight loss protocols. He runs IV therapy, hormone therapy, and aesthetics from one clinic because, in his view, your health does not fit into specialty buckets.
                     </p>
                   </div>
                   <div className="mt-6 pt-6 border-t border-white/[0.06] flex flex-wrap gap-3">
-                    <a href="tel:2816669211" className="px-4 py-2 bg-[#00D9FF]/10 border border-[#00D9FF]/30 text-[#00D9FF] text-sm font-medium rounded-lg hover:bg-[#00D9FF] hover:text-[#0F1419] transition-all">
+                    <a href="tel:2816669211" className="px-4 py-2 bg-[#2DD4BF]/10 border border-[#2DD4BF]/30 text-[#2DD4BF] text-sm font-medium rounded-lg hover:bg-[#2DD4BF] hover:text-[#0B1120] transition-all">
                       Free BioTE Consultation
                     </a>
                     <a href="https://www.vagaro.com/ivlytes/book-now" target="_blank" rel="noopener noreferrer"
-                      className="px-4 py-2 border border-white/20 text-[#F5F5F5] text-sm font-medium rounded-lg hover:border-[#00D9FF]/40 hover:text-[#00D9FF] transition-all">
+                      className="px-4 py-2 border border-white/20 text-[#F0EDE8] text-sm font-medium rounded-lg hover:border-[#2DD4BF]/40 hover:text-[#2DD4BF] transition-all">
                       Book Appointment
                     </a>
                   </div>
@@ -95,7 +88,7 @@ export default function StaffPage() {
                   <AvatarPlaceholder initials="?" size="lg" className="mx-auto mb-4 opacity-40" />
                   <div className="h-4 bg-white/[0.06] rounded mb-2 mx-8" />
                   <div className="h-3 bg-white/[0.04] rounded mb-4 mx-12" />
-                  <p className="text-xs text-[#A0AEC0]/60 italic">
+                  <p className="text-xs text-[#9BA8BB]/60 italic">
                     {/* TODO: client to provide staff names, photos, and bios */}
                     Staff member information coming soon.
                   </p>

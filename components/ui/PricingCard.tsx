@@ -27,7 +27,7 @@ export default function PricingCard({
     <div className="relative">
       {badge && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-          <span className="px-3 py-1 bg-[#D4AF37] text-[#0F1419] text-xs font-bold rounded-full">
+          <span className="px-3 py-1 bg-[#2DD4BF] text-[#0B1120] text-xs font-bold rounded-full">
             {badge}
           </span>
         </div>
@@ -35,24 +35,24 @@ export default function PricingCard({
       <GlassCard
         className={`p-8 h-full flex flex-col ${
           highlighted
-            ? "border-[#00D9FF]/40 shadow-[0_0_30px_rgba(0,217,255,0.15)]"
+            ? "border-[#2DD4BF]/40 shadow-[0_0_30px_rgba(0,217,255,0.15)]"
             : ""
         }`}
       >
         <div className="mb-6">
-          <h3 className="text-xl font-sora font-semibold text-[#F5F5F5] mb-2">{title}</h3>
-          {description && <p className="text-sm text-[#A0AEC0]">{description}</p>}
+          <h3 className="text-xl font-sora font-semibold text-[#F0EDE8] mb-2">{title}</h3>
+          {description && <p className="text-sm text-[#9BA8BB]">{description}</p>}
         </div>
 
         <div className="mb-8">
-          <span className="text-4xl font-sora font-bold text-[#F5F5F5]">{price}</span>
-          {period && <span className="text-[#A0AEC0] ml-1 text-sm">{period}</span>}
+          <span className="text-4xl font-sora font-bold text-[#F0EDE8]">{price}</span>
+          {period && <span className="text-[#9BA8BB] ml-1 text-sm">{period}</span>}
         </div>
 
         <ul className="space-y-3 mb-8 flex-grow">
           {features.map((feature, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm text-[#A0AEC0]">
-              <Check className="w-4 h-4 text-[#00D9FF] flex-shrink-0 mt-0.5" />
+            <li key={i} className="flex items-start gap-3 text-sm text-[#9BA8BB]">
+              <Check className="w-4 h-4 text-[#2DD4BF] flex-shrink-0 mt-0.5" />
               {feature}
             </li>
           ))}

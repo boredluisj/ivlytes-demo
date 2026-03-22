@@ -46,7 +46,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0F1419]/95 backdrop-blur-md border-b border-white/[0.06]"
+            ? "bg-[#0B1120]/95 backdrop-blur-md border-b border-white/[0.06]"
             : "bg-transparent"
         }`}
       >
@@ -84,19 +84,19 @@ export default function Header() {
                       <button
                         className={`group relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                           active || activeDropdown === link.label
-                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
-                            : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.06]"
+                            ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
+                            : "text-[#9BA8BB] hover:text-[#F0EDE8] hover:bg-white/[0.06]"
                         }`}
                       >
                         {link.label}
                         <ChevronDown
                           className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                            activeDropdown === link.label ? "rotate-180 text-[#00D9FF]" : ""
+                            activeDropdown === link.label ? "rotate-180 text-[#2DD4BF]" : ""
                           }`}
                         />
                         {/* Active dot indicator */}
                         {active && (
-                          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#00D9FF]" />
+                          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#2DD4BF]" />
                         )}
                       </button>
                     ) : (
@@ -104,14 +104,14 @@ export default function Header() {
                         href={link.href}
                         className={`group relative flex items-center px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                           active
-                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
-                            : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.06]"
+                            ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
+                            : "text-[#9BA8BB] hover:text-[#F0EDE8] hover:bg-white/[0.06]"
                         }`}
                       >
                         {link.label}
                         {/* Animated underline on hover */}
                         <span
-                          className={`absolute bottom-1.5 left-3.5 right-3.5 h-[1.5px] rounded-full bg-[#00D9FF] origin-left transition-transform duration-200 ${
+                          className={`absolute bottom-1.5 left-3.5 right-3.5 h-[1.5px] rounded-full bg-[#2DD4BF] origin-left transition-transform duration-200 ${
                             active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                           }`}
                         />
@@ -127,10 +127,10 @@ export default function Header() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.97 }}
                             transition={{ duration: 0.15, ease: "easeOut" }}
-                            className="absolute top-full left-0 mt-2 w-56 bg-[#0D1117]/98 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden"
+                            className="absolute top-full left-0 mt-2 w-56 bg-[#172035]/98 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden"
                           >
                             {/* Top glow accent */}
-                            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#00D9FF]/40 to-transparent" />
+                            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#2DD4BF]/40 to-transparent" />
                             <div className="py-1.5">
                               {link.dropdown.map((item) => {
                                 const itemActive = pathname === item.href;
@@ -140,16 +140,16 @@ export default function Header() {
                                     href={item.href}
                                     className={`group flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-150 ${
                                       itemActive
-                                        ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
-                                        : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.05]"
+                                        ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
+                                        : "text-[#9BA8BB] hover:text-[#F0EDE8] hover:bg-white/[0.05]"
                                     }`}
                                   >
                                     {/* Left accent bar */}
                                     <span
                                       className={`w-[2px] h-4 rounded-full flex-shrink-0 transition-colors duration-150 ${
                                         itemActive
-                                          ? "bg-[#00D9FF]"
-                                          : "bg-white/10 group-hover:bg-[#00D9FF]/60"
+                                          ? "bg-[#2DD4BF]"
+                                          : "bg-white/10 group-hover:bg-[#2DD4BF]/60"
                                       }`}
                                     />
                                     {item.label}
@@ -170,7 +170,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href="tel:2816669211"
-                className="flex items-center gap-2 text-sm text-[#A0AEC0] hover:text-[#F5F5F5] transition-colors px-2 py-1.5 rounded-lg hover:bg-white/[0.05]"
+                className="flex items-center gap-2 text-sm text-[#9BA8BB] hover:text-[#F0EDE8] transition-colors px-2 py-1.5 rounded-lg hover:bg-white/[0.05]"
               >
                 <Phone className="w-4 h-4" />
                 <span>(281) 666-9211</span>
@@ -179,7 +179,7 @@ export default function Header() {
                 href="https://www.vagaro.com/ivlytes/book-now"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#00D9FF] text-[#0F1419] text-sm font-semibold rounded-xl hover:bg-[#00D9FF]/90 transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]"
+                className="px-4 py-2 bg-[#2DD4BF] text-[#0B1120] text-sm font-semibold rounded-xl hover:bg-[#2DD4BF]/90 transition-all duration-200 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]"
               >
                 Book Now
               </a>
@@ -187,7 +187,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-[#A0AEC0] hover:text-[#F5F5F5] transition-colors"
+              className="lg:hidden p-2 text-[#9BA8BB] hover:text-[#F0EDE8] transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
@@ -214,13 +214,13 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-80 bg-[#0F1419] border-l border-white/[0.06] lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 bottom-0 z-50 w-80 bg-[#0B1120] border-l border-white/[0.06] lg:hidden overflow-y-auto"
             >
               <div className="flex items-center justify-between p-6 border-b border-white/[0.06]">
-                <span className="font-sora font-semibold text-[#F5F5F5]">Menu</span>
+                <span className="font-sora font-semibold text-[#F0EDE8]">Menu</span>
                 <button
                   onClick={() => setMobileOpen(false)}
-                  className="p-2 text-[#A0AEC0] hover:text-[#F5F5F5]"
+                  className="p-2 text-[#9BA8BB] hover:text-[#F0EDE8]"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -232,7 +232,7 @@ export default function Header() {
                   <div key={link.label}>
                     {link.dropdown ? (
                       <>
-                        <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-[#A0AEC0]/60 mt-4 first:mt-0">
+                        <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-[#9BA8BB]/60 mt-4 first:mt-0">
                           {link.label}
                         </div>
                         {link.dropdown.map((item) => {
@@ -244,11 +244,11 @@ export default function Header() {
                               onClick={() => setMobileOpen(false)}
                               className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm ${
                                 itemActive
-                                  ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
-                                  : "text-[#A0AEC0] hover:text-[#00D9FF] hover:bg-white/[0.04]"
+                                  ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
+                                  : "text-[#9BA8BB] hover:text-[#2DD4BF] hover:bg-white/[0.04]"
                               }`}
                             >
-                              <span className={`w-[2px] h-3.5 rounded-full flex-shrink-0 ${itemActive ? "bg-[#00D9FF]" : "bg-white/20"}`} />
+                              <span className={`w-[2px] h-3.5 rounded-full flex-shrink-0 ${itemActive ? "bg-[#2DD4BF]" : "bg-white/20"}`} />
                               {item.label}
                             </Link>
                           );
@@ -260,8 +260,8 @@ export default function Header() {
                         onClick={() => setMobileOpen(false)}
                         className={`block px-3 py-2 rounded-lg transition-colors font-medium ${
                           isActive(link.href)
-                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
-                            : "text-[#F5F5F5] hover:text-[#00D9FF] hover:bg-white/[0.04]"
+                            ? "text-[#2DD4BF] bg-[#2DD4BF]/[0.08]"
+                            : "text-[#F0EDE8] hover:text-[#2DD4BF] hover:bg-white/[0.04]"
                         }`}
                       >
                         {link.label}
@@ -273,7 +273,7 @@ export default function Header() {
                 <div className="pt-6 border-t border-white/[0.06] space-y-3 mt-6">
                   <a
                     href="tel:2816669211"
-                    className="flex items-center gap-2 px-3 py-2 text-[#A0AEC0] hover:text-[#F5F5F5] transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 text-[#9BA8BB] hover:text-[#F0EDE8] transition-colors"
                   >
                     <Phone className="w-4 h-4" />
                     <span>(281) 666-9211</span>
@@ -282,7 +282,7 @@ export default function Header() {
                     href="https://www.vagaro.com/ivlytes/book-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-3 bg-[#00D9FF] text-[#0F1419] font-semibold rounded-xl hover:bg-[#00D9FF]/90 transition-all"
+                    className="block w-full text-center px-4 py-3 bg-[#2DD4BF] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2DD4BF]/90 transition-all"
                   >
                     Book Now
                   </a>

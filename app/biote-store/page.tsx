@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function BioTeStorePage() {
   return (
-    <section className="pt-24 pb-24 bg-[#0F1419]">
+    <section className="pt-24 pb-24 bg-[#0B1120]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimateOnScroll className="mb-6">
           <SectionHeading
@@ -28,11 +28,11 @@ export default function BioTeStorePage() {
         </AnimateOnScroll>
 
         <AnimateOnScroll className="mb-12">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-xl bg-[#D4AF37]/[0.06] border border-[#D4AF37]/20">
-            <ShoppingBag className="w-5 h-5 text-[#D4AF37] flex-shrink-0" />
-            <p className="text-sm text-[#A0AEC0]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5 rounded-xl bg-[#2DD4BF]/[0.06] border border-[#2DD4BF]/20">
+            <ShoppingBag className="w-5 h-5 text-[#2DD4BF] flex-shrink-0" />
+            <p className="text-sm text-[#9BA8BB]">
               All products are purchased through our partner portal at{" "}
-              <a href="https://patients.shopbiote.com" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] font-semibold hover:underline">
+              <a href="https://patients.shopbiote.com" target="_blank" rel="noopener noreferrer" className="text-[#2DD4BF] font-semibold hover:underline">
                 patients.shopbiote.com
               </a>. Purchases are secured and fulfilled directly by BioTE.
             </p>
@@ -44,10 +44,10 @@ export default function BioTeStorePage() {
           return (
             <div key={category} className="mb-14">
               <AnimateOnScroll className="mb-6">
-                <h2 className="text-xl font-sora font-semibold text-[#F5F5F5] flex items-center gap-3">
-                  <span className="h-px flex-grow bg-gradient-to-r from-[#D4AF37]/30 to-transparent" />
+                <h2 className="text-xl font-sora font-semibold text-[#F0EDE8] flex items-center gap-3">
+                  <span className="h-px flex-grow bg-gradient-to-r from-[#2DD4BF]/30 to-transparent" />
                   {category}
-                  <span className="h-px flex-grow bg-gradient-to-l from-[#D4AF37]/30 to-transparent" />
+                  <span className="h-px flex-grow bg-gradient-to-l from-[#2DD4BF]/30 to-transparent" />
                 </h2>
               </AnimateOnScroll>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -61,11 +61,11 @@ export default function BioTeStorePage() {
                     >
                       <GlassCard hover className="p-5 h-full flex flex-col">
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="font-sora font-semibold text-[#F5F5F5] text-sm group-hover:text-[#D4AF37] transition-colors">{product.name}</h3>
-                          <ExternalLink className="w-3.5 h-3.5 text-[#A0AEC0] flex-shrink-0 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <h3 className="font-sora font-semibold text-[#F0EDE8] text-sm group-hover:text-[#2DD4BF] transition-colors">{product.name}</h3>
+                          <ExternalLink className="w-3.5 h-3.5 text-[#9BA8BB] flex-shrink-0 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </div>
-                        <p className="text-xs text-[#A0AEC0] leading-relaxed flex-grow mb-4">{product.description}</p>
-                        <span className="text-xs text-[#D4AF37] font-medium">Buy at shopbiote.com →</span>
+                        <p className="text-xs text-[#9BA8BB] leading-relaxed flex-grow mb-4">{product.description}</p>
+                        <span className="text-xs text-[#2DD4BF] font-medium">Buy at shopbiote.com →</span>
                       </GlassCard>
                     </a>
                   </AnimateOnScroll>
@@ -76,11 +76,11 @@ export default function BioTeStorePage() {
         })}
 
         <AnimateOnScroll>
-          <div className="text-center mt-8 p-8 rounded-2xl bg-[#D4AF37]/[0.06] border border-[#D4AF37]/20">
-            <p className="text-[#F5F5F5] font-semibold mb-2">Ready to shop?</p>
-            <p className="text-sm text-[#A0AEC0] mb-4">All BioTE products are available through our patient portal. Secure checkout, fast shipping.</p>
+          <div className="text-center mt-8 p-8 rounded-2xl bg-[#2DD4BF]/[0.06] border border-[#2DD4BF]/20">
+            <p className="text-[#F0EDE8] font-semibold mb-2">Ready to shop?</p>
+            <p className="text-sm text-[#9BA8BB] mb-4">All BioTE products are available through our patient portal. Secure checkout, fast shipping.</p>
             <a href="https://patients.shopbiote.com" target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0F1419] font-semibold rounded-xl hover:bg-[#D4AF37]/90 transition-all">
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#2DD4BF] text-[#0B1120] font-semibold rounded-xl hover:bg-[#2DD4BF]/90 transition-all">
               Shop at patients.shopbiote.com <ExternalLink className="w-4 h-4" />
             </a>
           </div>
