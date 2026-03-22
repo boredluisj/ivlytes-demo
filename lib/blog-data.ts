@@ -6,6 +6,8 @@ export interface BlogPost {
   category: string;
   excerpt: string;
   readTime: number;
+  heroImage: string;
+  heroImageAlt: string;
   content: string;
 }
 
@@ -19,6 +21,8 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "IV infusion therapy delivers nutrients directly into the bloodstream, bypassing the digestive system for maximum absorption and immediate results.",
     readTime: 5,
+    heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Medical professional administering IV infusion therapy to a patient in a wellness clinic",
     content: `
 ## What Is IV Infusion Therapy?
 
@@ -69,6 +73,8 @@ Ready to experience the difference? [Book your IV drip today](https://www.vagaro
     excerpt:
       "Colonic hydrotherapy is one of the most effective ways to detoxify your colon, improve digestion, and restore gut health. Here's what the science says.",
     readTime: 6,
+    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Person relaxing in a wellness spa setting representing gut health and digestive wellness treatments",
     content: `
 ## What Is Colonic Hydrotherapy?
 
@@ -124,6 +130,8 @@ A series of 10 sessions is recommended for comprehensive intestinal cleansing an
     excerpt:
       "Chronic Fatigue Syndrome affects millions. The Myers' Cocktail — a targeted IV blend of B vitamins, magnesium, and Vitamin C — has shown remarkable results for CFS patients.",
     readTime: 7,
+    heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Person with chronic fatigue and low energy representing the debilitating effects of chronic fatigue syndrome",
     content: `
 ## Understanding Chronic Fatigue Syndrome
 
@@ -180,6 +188,8 @@ IV therapy is not a cure for CFS, and we're transparent about that. It's a power
     excerpt:
       "Cold and flu season doesn't have to take you down. Our Immunity Plus Drip combines high-dose Vitamin C, zinc, and glutathione to fortify your immune defenses.",
     readTime: 5,
+    heroImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Fresh citrus fruits rich in Vitamin C representing immune system support and natural immunity boosters",
     content: `
 ## Why Your Immune System Needs More Than Orange Juice
 
@@ -241,6 +251,8 @@ Same-day appointments available. [Book your Immunity Drip](https://www.vagaro.co
     excerpt:
       "SkinPen microneedling harnesses your skin's own healing response to reduce wrinkles, acne scars, and hyperpigmentation. Here's exactly how it works.",
     readTime: 6,
+    heroImage: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Close-up of healthy glowing skin representing the results of SkinPen microneedling collagen induction therapy",
     content: `
 ## What Is Microneedling?
 
@@ -313,6 +325,8 @@ Microneedling is not recommended for:
     excerpt:
       "Vitamin C is far more than a cold remedy. In high-dose IV form, it's an anti-cancer antioxidant, collagen synthesizer, and immune modulator with effects impossible to achieve orally.",
     readTime: 5,
+    heroImage: "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Fresh lemons and citrus fruits high in Vitamin C representing antioxidant nutrition and immune health",
     content: `
 ## Vitamin C: Beyond Cold Prevention
 
@@ -371,6 +385,8 @@ Studies show that IV Vitamin C reduces the duration of upper respiratory infecti
     excerpt:
       "NAD+ is the molecule at the center of cellular energy production and DNA repair. IV delivery of NAD+ has shown remarkable results for anti-aging, addiction recovery, and neurological health.",
     readTime: 7,
+    heroImage: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Scientific laboratory environment representing NAD+ cellular research and anti-aging molecular therapy",
     content: `
 ## What Is NAD+?
 
@@ -436,6 +452,8 @@ Contact us to discuss whether NAD+ therapy is appropriate for your specific heal
     excerpt:
       "Let's address the questions patients are too embarrassed to ask about colonic hydrotherapy — because the reality is much less uncomfortable than you probably imagine.",
     readTime: 6,
+    heroImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Calm and private wellness spa environment representing the comfort and dignity of modern colonic hydrotherapy",
     content: `
 ## The Questions Nobody Asks Out Loud
 
@@ -485,6 +503,8 @@ The first session is often the most anxiety-inducing — and usually the most re
     excerpt:
       "The gut and brain are in constant communication through the gut-brain axis. What you eat directly shapes your mood, anxiety levels, and cognitive function.",
     readTime: 7,
+    heroImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=80&auto=format&fit=crop",
+    heroImageAlt: "Colorful nutrient-rich whole foods including vegetables and fruits representing the gut-brain connection and mental health nutrition",
     content: `
 ## The Second Brain
 

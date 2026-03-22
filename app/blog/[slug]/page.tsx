@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react";
 import { blogPosts, getBlogPost, getRelatedPosts } from "@/lib/blog-data";
-import AvatarPlaceholder from "@/components/shared/AvatarPlaceholder";
 import Badge from "@/components/ui/Badge";
 import GlassCard from "@/components/ui/GlassCard";
 import { formatDate } from "@/lib/utils";
@@ -110,14 +110,22 @@ export default async function BlogPostPage({ params }: Props) {
           </Link>
 
           {/* Header */}
-          <header className="mb-10">
+          <header className="mb-8">
             <Badge className="mb-4">{post.category}</Badge>
             <h1 className="text-3xl sm:text-4xl font-sora font-bold text-[#F0EDE8] leading-tight mb-6">
               {post.title}
             </h1>
             <div className="flex items-center gap-6 flex-wrap">
               <div className="flex items-center gap-3">
-                <AvatarPlaceholder initials="AS" size="sm" />
+                <div className="relative w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-white/[0.12]">
+                  <Image
+                    src="/images/team/dr-shahzad.jpg"
+                    alt="Dr. Arif Shahzad MD — Medical Director, IV-LYTES & Wellness Kingwood TX"
+                    fill
+                    className="object-cover object-top"
+                    sizes="36px"
+                  />
+                </div>
                 <div>
                   <div className="text-sm font-medium text-[#F0EDE8]">{post.author}</div>
                   <div className="text-xs text-[#9BA8BB]">Medical Director, IV-LYTES & Wellness</div>
@@ -130,8 +138,18 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </header>
 
-          {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-[#2DD4BF]/30 to-transparent mb-10" />
+          {/* Hero Image */}
+          <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden mb-10 border border-white/[0.07]">
+            <Image
+              src={post.heroImage}
+              alt={post.heroImageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120]/60 to-transparent" />
+          </div>
 
           {/* Content */}
           <div className="prose-custom">
