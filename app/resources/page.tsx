@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FileText, ExternalLink, Download, Clock, Phone } from "lucide-react";
+import { FileText, ExternalLink, Clock, Phone } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import GlassCard from "@/components/ui/GlassCard";
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
 };
 
 const guides = [
-  { title: "Colonoscopy Prep Guide", desc: "Complete 5-day prep protocol before your colonoscopy procedure.", href: "/colonprep", internal: true },
-  { title: "SkinPen Pre & Post Care", desc: "How to prepare for microneedling and care for your skin during recovery.", href: "#", internal: false, todo: true },
-  { title: "Mounjaro Quick Start Guide", desc: "Step-by-step instructions for your first Tirzepatide injection.", href: "#", internal: false, todo: true },
-  { title: "Ozempic Quick Start Guide", desc: "How to use your semaglutide pen safely and effectively.", href: "#", internal: false, todo: true },
-  { title: "Wegovy Quick Start Guide", desc: "Getting started with your Wegovy (semaglutide) weight loss program.", href: "#", internal: false, todo: true },
+  { title: "Colonoscopy Prep Guide", desc: "Complete 5-day protocol. Follow before your colonoscopy procedure.", href: "/colonprep", internal: true },
+  { title: "SkinPen Pre & Post Care", desc: "Day-by-day recovery instructions and precautions for microneedling.", href: "/resources/skinpen-care", internal: true },
+  { title: "Mounjaro (Tirzepatide) Guide", desc: "Dosing schedule, injection steps, side effects, and storage for Mounjaro.", href: "/resources/mounjaro", internal: true },
+  { title: "Ozempic (Semaglutide) Guide", desc: "How to use your Ozempic pen — dosing, injection, and storage.", href: "/resources/ozempic", internal: true },
+  { title: "Wegovy Quick Start Guide", desc: "5-month dosing schedule and injection instructions for Wegovy.", href: "/resources/wegovy", internal: true },
 ];
 
 const quickLinks = [
@@ -67,32 +67,18 @@ export default function ResourcesPage() {
             <div className="space-y-4">
               {guides.map((guide, i) => (
                 <AnimateOnScroll key={guide.title} delay={i * 0.07}>
-                  {guide.internal ? (
-                    <Link href={guide.href}>
-                      <GlassCard hover className="p-5 flex items-center gap-4 cursor-pointer">
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
-                          <FileText className="w-5 h-5 text-[#2DD4BF]" />
-                        </div>
-                        <div className="flex-grow">
-                          <div className="text-sm font-semibold text-[#F0EDE8]">{guide.title}</div>
-                          <div className="text-xs text-[#9BA8BB]">{guide.desc}</div>
-                        </div>
-                        <ExternalLink className="w-4 h-4 text-[#9BA8BB]" />
-                      </GlassCard>
-                    </Link>
-                  ) : (
-                    <GlassCard className="p-5 flex items-center gap-4 opacity-60">
-                      <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #9BA8BB20, #9BA8BB20)" }}>
-                        <Download className="w-5 h-5 text-[#9BA8BB]" />
+                  <Link href={guide.href}>
+                    <GlassCard hover className="p-5 flex items-center gap-4 cursor-pointer">
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "linear-gradient(135deg, #2DD4BF20, #2DD4BF20)" }}>
+                        <FileText className="w-5 h-5 text-[#2DD4BF]" />
                       </div>
                       <div className="flex-grow">
                         <div className="text-sm font-semibold text-[#F0EDE8]">{guide.title}</div>
                         <div className="text-xs text-[#9BA8BB]">{guide.desc}</div>
                       </div>
-                      <span className="text-xs text-[#9BA8BB]/60 italic">Coming soon</span>
-                      {/* TODO: Add PDF link from client */}
+                      <ExternalLink className="w-4 h-4 text-[#9BA8BB]" />
                     </GlassCard>
-                  )}
+                  </Link>
                 </AnimateOnScroll>
               ))}
             </div>

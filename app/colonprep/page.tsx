@@ -11,46 +11,37 @@ export const metadata: Metadata = {
 
 const steps = [
   {
-    timing: "5 Days Before",
+    timing: "5 Days Before Colonoscopy",
     color: "#2DD4BF",
     instructions: [
-      "Take 2 tablespoons of Milk of Magnesia at bedtime",
-      "Begin reducing fiber intake gradually",
-      "Stay well hydrated — at least 8 glasses of water daily",
-      "Avoid nuts, seeds, and high-fiber foods",
+      "Take 2 tablespoons of Milk of Magnesia at bedtime — repeat each night for 5 nights.",
     ],
   },
   {
-    timing: "3 Days Before",
+    timing: "3 Days Before Procedure",
     color: "#2DD4BF",
     instructions: [
-      "Switch to a low-fiber diet",
-      "Avoid raw fruits and vegetables",
-      "No nuts, seeds, popcorn, or whole grains",
-      "White bread, white rice, eggs, and cooked vegetables are fine",
-      "Continue drinking plenty of fluids",
+      "Begin a low-fiber diet.",
+      "Avoid all foods with nuts or seeds.",
     ],
   },
   {
-    timing: "1 Day Before",
+    timing: "1 Day Before Procedure",
     color: "#2DD4BF",
     instructions: [
-      "Clear liquid diet only — no solid foods",
-      "Allowed: water, clear broth, apple juice, sports drinks, black coffee/tea, gelatin",
-      "At 5:00 PM: Take 3 Dulcolax (bisacodyl) tablets",
-      "Drink additional clear fluids throughout the day",
-      "No red, orange, or purple liquids",
+      "Begin clear liquid diet ONLY — no solid foods.",
+      "At 5:00 PM: Take 3 Dulcolax laxative tablets with 8 oz of water.",
+      "Important: Purchase laxative TABLETS — NOT Soft Gel.",
     ],
   },
   {
-    timing: "Day of Procedure",
+    timing: "Day of Colonoscopy",
     color: "#2DD4BF",
     instructions: [
-      "Fast for 4 hours before your procedure time",
-      "You may take essential medications with a small sip of water",
-      "Arrange for someone to drive you home — you cannot drive after sedation",
-      "Arrive 15–20 minutes before your scheduled appointment",
-      "Leave jewelry and valuables at home",
+      "Nothing by mouth starting 4 hours before your scheduled procedure.",
+      "No gum, hard candy, or mints.",
+      "No smoking tobacco, marijuana, or use of e-cigarettes the day of your procedure.",
+      "Take your essential morning medications (heart, blood pressure, anti-seizure) with 2 oz (4 tablespoons) of water only.",
     ],
   },
 ];
@@ -72,10 +63,11 @@ export default function ColonPrepPage() {
             <AlertCircle className="w-5 h-5 text-[#2DD4BF] flex-shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-semibold text-[#F0EDE8] mb-1">Important Notice</p>
-              <p className="text-sm text-[#9BA8BB]">
+              <p className="text-sm text-[#9BA8BB] mb-2">
                 This prep protocol is a general guide. Always follow the specific instructions provided by your gastroenterologist, as protocols may vary. Call your doctor&apos;s office or our clinic at{" "}
                 <a href="tel:2816669211" className="text-[#2DD4BF]">(281) 666-9211</a> with any questions.
               </p>
+              <p className="text-sm font-bold text-[#2DD4BF]">Make sure to purchase Laxative Tablets — NOT Soft Gel.</p>
             </div>
           </GlassCard>
         </AnimateOnScroll>
