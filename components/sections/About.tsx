@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
-import AvatarPlaceholder from "@/components/shared/AvatarPlaceholder";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
 import GlassCard from "@/components/ui/GlassCard";
 
@@ -60,8 +60,15 @@ export default function About() {
           <AnimateOnScroll delay={0.2}>
             <GlassCard className="p-8">
               <div className="flex items-start gap-5 mb-6">
-                {/* TODO: Replace with real photo from client */}
-                <AvatarPlaceholder initials="AS" size="xl" />
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 border border-white/[0.10]">
+                  <Image
+                    src="/images/team/dr-shahzad.jpg"
+                    alt="Dr. Arif Shahzad MD"
+                    fill
+                    className="object-cover object-top"
+                    sizes="80px"
+                  />
+                </div>
                 <div>
                   <h3 className="text-xl font-sora font-bold text-[#F5F5F5]">Dr. Arif Shahzad MD</h3>
                   <p className="text-sm text-[#00D9FF] mb-3">Owner & Medical Director</p>

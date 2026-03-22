@@ -1,88 +1,79 @@
 "use client";
 
-import { useReducedMotion, motion } from "framer-motion";
-import { ArrowRight, Zap, Clock, DollarSign } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, Zap, Clock, Shield } from "lucide-react";
+import Image from "next/image";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 28 },
   visible: (delay: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay },
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay },
   }),
 };
 
 const statCards = [
-  { icon: Zap, label: "9 IV Drip Formulas", sub: "Customized to your needs" },
-  { icon: Clock, label: "Same-Day Appointments", sub: "Book online instantly" },
-  { icon: DollarSign, label: "Cash-Pay Only", sub: "No insurance games" },
+  { icon: Zap, label: "9 IV Drip Formulas", sub: "Custom-blended to your goals" },
+  { icon: Clock, label: "Same-Day Appointments", sub: "Walk-ins welcome" },
+  { icon: Shield, label: "Physician Supervised", sub: "Dr. Arif Shahzad, MD" },
 ];
 
 export default function Hero() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[#080C10]"
       aria-label="Hero section"
     >
-      {/* Mesh gradient background */}
+      {/* ── Deep background layers ── */}
+      {/* Base dark gradient */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#080C10] via-[#0D1B2A] to-[#080C10]" />
+
+      {/* Large teal glow — top-left */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full z-0 pointer-events-none"
         style={{
-          background: "linear-gradient(45deg, #0F1419, #1A3A3A, #0F1419)",
-          backgroundSize: "400% 400%",
-          animation: prefersReducedMotion ? "none" : "mesh-shift 10s ease infinite",
+          background: "radial-gradient(circle, rgba(0,217,255,0.12) 0%, transparent 65%)",
+          filter: "blur(40px)",
+        }}
+      />
+      {/* Gold glow — bottom-right */}
+      <div
+        className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full z-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(circle, rgba(212,175,55,0.10) 0%, transparent 65%)",
+          filter: "blur(50px)",
         }}
       />
 
       {/* Subtle grid overlay */}
       <div
-        className="absolute inset-0 z-0 opacity-[0.03]"
+        className="absolute inset-0 z-0 opacity-[0.025]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(0,217,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+            "linear-gradient(rgba(0,217,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(0,217,255,0.8) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
         }}
       />
 
-      {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-10 z-0 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #00D9FF 0%, transparent 70%)" }}
-      />
+      {/* ── Content ── */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-      {/* Gold particles (static dots) */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-[#D4AF37] opacity-20"
-            style={{
-              width: Math.random() * 3 + 1 + "px",
-              height: Math.random() * 3 + 1 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Content */}
-          <div>
+          {/* ── Left: Copy ── */}
+          <div className="order-2 lg:order-1">
             {/* Trust badges */}
             <motion.div
               custom={0}
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="flex flex-wrap gap-2 mb-8"
+              className="flex flex-wrap gap-2 mb-7"
             >
               {["Physician Supervised", "Kingwood TX", "Est. 2019"].map((badge) => (
                 <span
                   key={badge}
-                  className="px-3 py-1 text-xs font-medium rounded-full bg-[#00D9FF]/10 border border-[#00D9FF]/20 text-[#00D9FF]"
+                  className="px-3 py-1 text-xs font-semibold rounded-full bg-[#00D9FF]/[0.10] border border-[#00D9FF]/25 text-[#00D9FF] tracking-wide"
                 >
                   {badge}
                 </span>
@@ -95,13 +86,13 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-sora font-bold text-[#F5F5F5] leading-tight tracking-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-sora font-bold text-[#F5F5F5] leading-[1.08] tracking-tight mb-6"
             >
-              IV Therapy &amp; Wellness{" "}
+              IV Therapy &amp; Wellness
               <span
-                className="block"
+                className="block mt-1"
                 style={{
-                  background: "linear-gradient(135deg, #00D9FF, #D4AF37)",
+                  background: "linear-gradient(120deg, #00D9FF 0%, #7BE8FF 40%, #D4AF37 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -117,21 +108,20 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="text-lg text-[#A0AEC0] leading-relaxed mb-4"
+              className="text-lg text-[#CBD5E0] leading-relaxed mb-3"
             >
               Kingwood&apos;s Premier IV Hydration, Hormone Therapy &amp; Medical Wellness Clinic
             </motion.p>
 
-            {/* Body */}
             <motion.p
               custom={0.35}
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="text-base text-[#A0AEC0]/80 leading-relaxed mb-10"
+              className="text-[0.95rem] text-[#A0AEC0] leading-relaxed mb-10"
             >
-              Physician-supervised wellness treatments designed to optimize your energy, health, and performance.
-              Same-day appointments available.
+              Physician-supervised treatments designed to optimize your energy, recovery, and long-term health.
+              Cash-pay only — no insurance games, no waiting rooms.
             </motion.p>
 
             {/* CTAs */}
@@ -140,74 +130,136 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 mb-10"
             >
               <a
                 href="https://www.vagaro.com/ivlytes/book-now"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#00D9FF] text-[#0F1419] font-semibold rounded-xl hover:bg-[#00D9FF]/90 hover:shadow-[0_0_30px_rgba(0,217,255,0.4)] transition-all duration-200 text-base"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-[#00D9FF] text-[#080C10] font-bold rounded-xl hover:bg-[#00D9FF]/90 hover:shadow-[0_0_40px_rgba(0,217,255,0.45)] transition-all duration-200 text-[0.95rem] tracking-wide"
               >
                 Book Your Session
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="/ivfluids"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-[#F5F5F5] font-medium rounded-xl hover:border-[#00D9FF]/40 hover:text-[#00D9FF] transition-all duration-200 text-base"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/[0.15] text-[#F5F5F5] font-medium rounded-xl hover:border-[#00D9FF]/50 hover:text-[#00D9FF] hover:bg-[#00D9FF]/[0.05] transition-all duration-200 text-[0.95rem]"
               >
                 View Services
               </a>
             </motion.div>
+
+            {/* Phone */}
+            <motion.p custom={0.55} initial="hidden" animate="visible" variants={fadeUp} className="text-sm text-[#A0AEC0]/70">
+              Or call{" "}
+              <a href="tel:2816669211" className="text-[#00D9FF] hover:underline font-medium">
+                (281) 666-9211
+              </a>{" "}
+              — Mon–Thu 9am–6pm, Fri 9am–1pm
+            </motion.p>
           </div>
 
-          {/* Right: Stat cards */}
-          <div className="grid grid-cols-1 gap-4">
-            {statCards.map((card, i) => (
-              <motion.div
-                key={card.label}
-                custom={0.4 + i * 0.1}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.05] border border-white/[0.08] backdrop-blur-xl hover:border-[#00D9FF]/30 transition-all duration-300"
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: "linear-gradient(135deg, #00D9FF20, #D4AF3720)" }}
-                >
-                  <card.icon className="w-5 h-5 text-[#00D9FF]" />
-                </div>
-                <div>
-                  <div className="font-sora font-semibold text-[#F5F5F5] text-sm">{card.label}</div>
-                  <div className="text-xs text-[#A0AEC0]">{card.sub}</div>
-                </div>
-              </motion.div>
-            ))}
+          {/* ── Right: Visual ── */}
+          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-end">
+            {/* Outer glow ring */}
+            <div
+              className="absolute inset-0 rounded-3xl z-0 pointer-events-none"
+              style={{
+                background: "radial-gradient(ellipse at center, rgba(0,217,255,0.18) 0%, transparent 70%)",
+                filter: "blur(30px)",
+              }}
+            />
 
-            {/* CTA card */}
+            {/* Main image container */}
             <motion.div
-              custom={0.7}
+              custom={0.2}
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="p-5 rounded-2xl bg-[#00D9FF]/10 border border-[#00D9FF]/20"
+              className="relative w-full max-w-[520px] aspect-[4/5] rounded-3xl overflow-hidden border border-white/[0.09] shadow-[0_30px_80px_rgba(0,0,0,0.6)]"
             >
-              <p className="text-sm text-[#F5F5F5] font-medium mb-1">Ready to feel your best?</p>
-              <p className="text-xs text-[#A0AEC0]">
-                Call us:{" "}
-                <a href="tel:2816669211" className="text-[#00D9FF] hover:underline">
-                  (281) 666-9211
-                </a>{" "}
-                — Mon–Thu 9am–6pm, Fri 9am–1pm
-              </p>
+              <Image
+                src="/images/services/iv-therapy.jpg"
+                alt="IV Therapy at IV-LYTES & Wellness Kingwood TX"
+                fill
+                className="object-cover object-center"
+                priority
+                sizes="(max-width: 1024px) 90vw, 520px"
+              />
+              {/* Gradient overlays for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080C10] via-transparent to-transparent opacity-70" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#080C10]/40 via-transparent to-transparent" />
+              {/* Top teal tint */}
+              <div className="absolute inset-0 bg-gradient-to-b from-[#00D9FF]/[0.06] to-transparent" />
+
+              {/* Corner accent lines */}
+              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-[#00D9FF]/60 rounded-tl-lg" />
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-[#D4AF37]/60 rounded-br-lg" />
+            </motion.div>
+
+            {/* Floating stat cards */}
+            <div className="absolute -left-4 lg:-left-10 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-10">
+              {statCards.map((card, i) => (
+                <motion.div
+                  key={card.label}
+                  custom={0.5 + i * 0.12}
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeUp}
+                  className="flex items-center gap-3 px-4 py-3 rounded-2xl backdrop-blur-xl border shadow-xl"
+                  style={{
+                    background: "rgba(13,17,23,0.85)",
+                    borderColor: "rgba(255,255,255,0.08)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06)",
+                  }}
+                >
+                  <div
+                    className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                    style={{ background: "linear-gradient(135deg, rgba(0,217,255,0.15), rgba(212,175,55,0.10))" }}
+                  >
+                    <card.icon className="w-4 h-4 text-[#00D9FF]" />
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-sora font-semibold text-[#F5F5F5] text-xs leading-tight whitespace-nowrap">{card.label}</div>
+                    <div className="text-[11px] text-[#A0AEC0] mt-0.5 whitespace-nowrap">{card.sub}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* "Kingwood's #1" badge — top right of image */}
+            <motion.div
+              custom={0.65}
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              className="absolute top-4 right-0 lg:-right-4 z-10 px-3.5 py-2.5 rounded-2xl backdrop-blur-xl border border-[#D4AF37]/30 text-center"
+              style={{
+                background: "rgba(13,17,23,0.90)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
+              }}
+            >
+              <div
+                className="text-xs font-bold tracking-wide"
+                style={{
+                  background: "linear-gradient(135deg, #D4AF37, #F5D87A)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                ★ Kingwood&apos;s
+              </div>
+              <div className="text-[10px] text-[#A0AEC0] mt-0.5 whitespace-nowrap">#1 Wellness Clinic</div>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #0F1419)" }}
+      {/* Bottom gradient fade into next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-40 z-10 pointer-events-none"
+        style={{ background: "linear-gradient(to bottom, transparent, #080C10)" }}
       />
     </section>
   );

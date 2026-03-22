@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Award } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
 import AnimateOnScroll from "@/components/shared/AnimateOnScroll";
@@ -33,8 +34,15 @@ export default function StaffPage() {
             <GlassCard className="p-8 lg:p-12 mb-8 max-w-4xl">
               <div className="flex flex-col lg:flex-row gap-8 items-start">
                 <div className="flex-shrink-0 text-center lg:text-left">
-                  {/* TODO: client to provide headshot — replace AvatarPlaceholder with real photo */}
-                  <AvatarPlaceholder initials="AS" size="xl" className="mx-auto lg:mx-0" />
+                  <div className="relative w-36 h-36 rounded-2xl overflow-hidden mx-auto lg:mx-0 border border-white/[0.10] shadow-lg">
+                    <Image
+                      src="/images/team/dr-shahzad.jpg"
+                      alt="Dr. Arif Shahzad MD"
+                      fill
+                      className="object-cover object-top"
+                      sizes="144px"
+                    />
+                  </div>
                   <div className="mt-4 space-y-2">
                     {["MD", "BioTE Certified", "GLP-1 Specialist", "IV Therapy Expert"].map((cred) => (
                       <div key={cred} className="flex items-center justify-center lg:justify-start gap-1.5">

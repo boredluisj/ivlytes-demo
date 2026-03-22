@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
 const navLinks = [
   {
@@ -28,12 +29,17 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const isActive = (href: string) => pathname === href;
+  const isDropdownActive = (dropdown: { href: string }[]) =>
+    dropdown.some((item) => pathname === item.href);
 
   return (
     <>
@@ -61,63 +67,110 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-              {navLinks.map((link) => (
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => link.dropdown && setActiveDropdown(link.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {link.dropdown ? (
-                    <button className="text-sm text-[#A0AEC0] hover:text-[#00D9FF] transition-colors duration-200 flex items-center gap-1">
-                      {link.label}
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="text-sm text-[#A0AEC0] hover:text-[#00D9FF] transition-colors duration-200"
-                    >
-                      {link.label}
-                    </Link>
-                  )}
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+              {navLinks.map((link) => {
+                const active = link.dropdown
+                  ? isDropdownActive(link.dropdown)
+                  : isActive(link.href);
 
-                  {/* Dropdown */}
-                  {link.dropdown && (
-                    <AnimatePresence>
-                      {activeDropdown === link.label && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 8 }}
-                          transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-2 w-52 bg-[#0F1419]/98 backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl overflow-hidden"
-                        >
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="block px-4 py-3 text-sm text-[#A0AEC0] hover:text-[#00D9FF] hover:bg-white/[0.04] transition-colors"
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  )}
-                </div>
-              ))}
+                return (
+                  <div
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => link.dropdown && setActiveDropdown(link.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    {link.dropdown ? (
+                      <button
+                        className={`group relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          active || activeDropdown === link.label
+                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
+                            : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.06]"
+                        }`}
+                      >
+                        {link.label}
+                        <ChevronDown
+                          className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                            activeDropdown === link.label ? "rotate-180 text-[#00D9FF]" : ""
+                          }`}
+                        />
+                        {/* Active dot indicator */}
+                        {active && (
+                          <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#00D9FF]" />
+                        )}
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className={`group relative flex items-center px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          active
+                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
+                            : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.06]"
+                        }`}
+                      >
+                        {link.label}
+                        {/* Animated underline on hover */}
+                        <span
+                          className={`absolute bottom-1.5 left-3.5 right-3.5 h-[1.5px] rounded-full bg-[#00D9FF] origin-left transition-transform duration-200 ${
+                            active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                          }`}
+                        />
+                      </Link>
+                    )}
+
+                    {/* Dropdown */}
+                    {link.dropdown && (
+                      <AnimatePresence>
+                        {activeDropdown === link.label && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                            transition={{ duration: 0.15, ease: "easeOut" }}
+                            className="absolute top-full left-0 mt-2 w-56 bg-[#0D1117]/98 backdrop-blur-xl border border-white/[0.08] rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.5)] overflow-hidden"
+                          >
+                            {/* Top glow accent */}
+                            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-[#00D9FF]/40 to-transparent" />
+                            <div className="py-1.5">
+                              {link.dropdown.map((item) => {
+                                const itemActive = pathname === item.href;
+                                return (
+                                  <Link
+                                    key={item.href}
+                                    href={item.href}
+                                    className={`group flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-150 ${
+                                      itemActive
+                                        ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
+                                        : "text-[#A0AEC0] hover:text-[#F5F5F5] hover:bg-white/[0.05]"
+                                    }`}
+                                  >
+                                    {/* Left accent bar */}
+                                    <span
+                                      className={`w-[2px] h-4 rounded-full flex-shrink-0 transition-colors duration-150 ${
+                                        itemActive
+                                          ? "bg-[#00D9FF]"
+                                          : "bg-white/10 group-hover:bg-[#00D9FF]/60"
+                                      }`}
+                                    />
+                                    {item.label}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    )}
+                  </div>
+                );
+              })}
             </nav>
 
             {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href="tel:2816669211"
-                className="flex items-center gap-2 text-sm text-[#A0AEC0] hover:text-[#F5F5F5] transition-colors"
+                className="flex items-center gap-2 text-sm text-[#A0AEC0] hover:text-[#F5F5F5] transition-colors px-2 py-1.5 rounded-lg hover:bg-white/[0.05]"
               >
                 <Phone className="w-4 h-4" />
                 <span>(281) 666-9211</span>
@@ -182,22 +235,34 @@ export default function Header() {
                         <div className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-[#A0AEC0]/60 mt-4 first:mt-0">
                           {link.label}
                         </div>
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block px-3 py-2 text-[#A0AEC0] hover:text-[#00D9FF] hover:bg-white/[0.04] rounded-lg transition-colors text-sm"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
+                        {link.dropdown.map((item) => {
+                          const itemActive = pathname === item.href;
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setMobileOpen(false)}
+                              className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm ${
+                                itemActive
+                                  ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
+                                  : "text-[#A0AEC0] hover:text-[#00D9FF] hover:bg-white/[0.04]"
+                              }`}
+                            >
+                              <span className={`w-[2px] h-3.5 rounded-full flex-shrink-0 ${itemActive ? "bg-[#00D9FF]" : "bg-white/20"}`} />
+                              {item.label}
+                            </Link>
+                          );
+                        })}
                       </>
                     ) : (
                       <Link
                         href={link.href}
                         onClick={() => setMobileOpen(false)}
-                        className="block px-3 py-2 text-[#F5F5F5] hover:text-[#00D9FF] hover:bg-white/[0.04] rounded-lg transition-colors"
+                        className={`block px-3 py-2 rounded-lg transition-colors font-medium ${
+                          isActive(link.href)
+                            ? "text-[#00D9FF] bg-[#00D9FF]/[0.08]"
+                            : "text-[#F5F5F5] hover:text-[#00D9FF] hover:bg-white/[0.04]"
+                        }`}
                       >
                         {link.label}
                       </Link>

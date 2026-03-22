@@ -42,6 +42,7 @@ export default function Testimonials() {
             label="Patient Stories"
             title="What Our Patients Say"
             subtitle="Real experiences from real Kingwood residents. Authentic results, no stock photos."
+            centered
           />
         </AnimateOnScroll>
         {/* TODO: replace with real Google reviews from client */}
