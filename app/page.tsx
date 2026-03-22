@@ -1,28 +1,34 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { StatsBand } from "@/components/StatsBand";
-import { ServicesBento } from "@/components/ServicesBento";
-import { AboutSection } from "@/components/AboutSection";
-import { TestimonialMarquee } from "@/components/TestimonialMarquee";
-import { CTASection } from "@/components/CTASection";
-import { Footer } from "@/components/Footer";
-import { MobileStickyCTA } from "@/components/MobileStickyCTA";
-import { WaveDivider } from "@/components/ui/WaveDivider";
+import type { Metadata } from "next";
+import Hero from "@/components/sections/Hero";
+import ServicesGrid from "@/components/sections/ServicesGrid";
+import About from "@/components/sections/About";
+import Testimonials from "@/components/sections/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import CTABanner from "@/components/sections/CTABanner";
+import BlogPreview from "@/components/sections/BlogPreview";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "IV-LYTES & Wellness | Kingwood's Premier IV Therapy Clinic",
+  description:
+    "Physician-supervised IV hydration therapy, colonic hydrotherapy, BioTE hormone therapy, medical weight loss, and SkinPen microneedling in Kingwood, TX. Same-day appointments available.",
+  openGraph: {
+    title: "IV-LYTES & Wellness | Kingwood TX",
+    description:
+      "Kingwood's premier IV therapy and wellness clinic. Physician-supervised. Cash-pay. Same-day appointments.",
+    url: "https://ivlytes.com",
+  },
+};
+
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white selection:bg-teal-200">
-      <Header />
+    <>
       <Hero />
-      <StatsBand />
-      <ServicesBento />
-      <WaveDivider flip />
-      <AboutSection />
-      <WaveDivider />
-      <TestimonialMarquee />
-      <CTASection />
-      <Footer />
-      <MobileStickyCTA />
-    </main>
+      <ServicesGrid />
+      <About />
+      <Testimonials />
+      <FAQ />
+      <BlogPreview />
+      <CTABanner />
+    </>
   );
 }

@@ -1,62 +1,71 @@
-@import "tailwindcss";
-
-@theme {
-  --color-primary: #0d9488;
-  --color-primary-dark: #0f766e;
-  --color-primary-light: #ccfbf1;
-  
-  --color-accent: #10b981;
-  --color-accent-light: #d1fae5;
-
-  --color-neutral-dark: #0f172a;
-  --color-neutral: #475569;
-  --color-neutral-light: #f8fafc;
-
-  --font-heading: var(--font-heading);
-  --font-body: var(--font-body);
-
-  --animate-blob1: blob1 14s ease-in-out infinite alternate;
-  --animate-blob2: blob2 18s ease-in-out infinite alternate;
-  --animate-blob3: blob3 10s ease-in-out infinite alternate;
-  --animate-gradient-shift: gradientShift 12s ease-in-out infinite alternate;
-}
-
-@layer utilities {
-  @keyframes blob1 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(40px, -30px) scale(1.1); }
-  }
-  @keyframes blob2 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-30px, 40px) scale(0.9); }
-  }
-  @keyframes blob3 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(20px, 20px) scale(1.15); }
-  }
-  
-  @keyframes gradientShift {
-    0% { background-position: 20% 20%, 80% 80%, 50% 50%; }
-    100% { background-position: 30% 10%, 70% 90%, 45% 55%; }
-  }
-
-  .hero-gradient {
-    background: radial-gradient(ellipse 80% 80% at 20% 20%, rgba(20, 184, 166, 0.15) 0%, transparent 60%),
-                radial-gradient(ellipse 60% 60% at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 60%),
-                radial-gradient(ellipse 70% 70% at 50% 50%, rgba(248, 250, 252, 1) 0%, transparent 80%);
-    animation: var(--animate-gradient-shift);
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --font-sora: 'Sora', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), sans-serif;
-  overflow-x: hidden;
+  background-color: #0F1419;
+  color: #F5F5F5;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes mesh-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1419;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00D9FF;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #00D9FF;
+  outline-offset: 2px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00D9FF, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.mesh-gradient {
+  background: linear-gradient(45deg, #0F1419, #1A3A3A, #0F1419);
+  background-size: 400% 400%;
+  animation: mesh-shift 10s ease infinite;
 }
